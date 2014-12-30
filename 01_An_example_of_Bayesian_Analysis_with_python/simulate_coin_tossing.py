@@ -1,3 +1,13 @@
+'''
+Script to generate the posterior pdf as the number of coin tosses increase using simple
+Bayesian analysis. This script uses uniform distribution as prior, and bimomial distribution
+as the likelihood.  
+
+Author: Qingkai Kong
+Email: qingkai.kong@gmail.com
+Date: 20141228
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 import decimal
