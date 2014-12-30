@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import decimal
 
 def generate_HT():
     '''
@@ -55,13 +56,22 @@ def plot_exmaple_of_all():
         y = H**R*(1-H)**T * 1
         
         #here, because the values for the 2048 and 4096 tosses are too small, less than 1e-320, 
-        #it becomes to zero, what I did here is to calculate the log(posterior), and then divided
-        #by 4, and then reclaculate the posterior using exp. This will change the height and width
-        #of the pdf, but for a relative comparison, this should be fine. I don't find a good way
-        #to work around this. 
-        if i > 5:
-            y = R*np.log(H) + T*np.log(1-H)
-            y = np.exp(y/4)
+        #it becomes to zero, this is the underflow issue usually happen in bayesian analysis.
+        #What I did here is to calculate the really small number using decimal module, and then 
+        #multiply this small number by a scalar which is largest integer number divide by 20, 
+        #this is more like a trial and error, so may not stable, but most of the time, it looks
+        #fine, I don't know if there's better ways to work around. 
+         
+        if i > 12:
+            #take the log of the likelihood, this will turn the multiply prbability into addition
+            y1 = R*np.log(H) + T*np.log(1-H)
+            y = []
+            
+            #recalculate the small number by taking the exp, but I multiplied by 10**factor, the
+            #factor is largest decimal divide by 20.
+            factor = int((-1)*np.min(y1[1:-1])/20)
+            for item in y1:
+                y.append(decimal.Decimal(item).exp()*10**factor)
         
         #plot the pdf
         ax = plt.subplot(5, 3, i+1)
