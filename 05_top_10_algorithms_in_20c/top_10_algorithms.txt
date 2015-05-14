@@ -1,0 +1,13 @@
+Top 10 algorithms in the 20th century
+“Great algorithms are the poetry of computation,” says Francis Sullivan of the Institute for Defense Analyses' Center for Computing Sciences in Bowie, Maryland. He and Jack Dongarra of the University of Tennessee and Oak Ridge National Laboratory have put together a sampling that might have made Robert Frost beam with pride—had the poet been a computer jock. Their list of 10 algorithms having “the greatest influence on the development and practice of science and engineering in the 20th century” appears in the January/February issue of Computing in Science & Engineering. If you use a computer, some of these algorithms are no doubt crunching your data as you read this. The drum roll, please:
+1946: The Metropolis Algorithm for Monte Carlo. Through the use of random processes, this algorithm offers an efficient way to stumble toward answers to problems that are too complicated to solve exactly.
+1947: Simplex Method for Linear Programming. An elegant solution to a common problem in planning and decision-making.
+1950: Krylov Subspace Iteration Method. A technique for rapidly solving the linear equations that abound in scientific computation.
+1951: The Decompositional Approach to Matrix Computations. A suite of techniques for numerical linear algebra.
+1957: The Fortran Optimizing Compiler. Turns high-level code into efficient computer-readable code.
+1959: QR Algorithm for Computing Eigenvalues. Another crucial matrix operation made swift and practical.
+1962: Quicksort Algorithms for Sorting. For the efficient handling of large databases.
+1965: Fast Fourier Transform. Perhaps the most ubiquitous algorithm in use today, it breaks down waveforms (like sound) into periodic components.
+1977: Integer Relation Detection. A fast method for spotting simple equations satisfied by collections of seemingly unrelated numbers.
+1987: Fast Multipole Method. A breakthrough in dealing with the complexity of n-body calculations, applied in problems ranging from celestial mechanics to protein folding.
+From: Random Samples, Science, page 799, February 4, 2000. 
