@@ -1,0 +1,124 @@
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Shift-signal-in-frequency-domain">Shift signal in frequency domain<a class="anchor-link" href="#Shift-signal-in-frequency-domain">&#182;</a></h2><p>We need shift an signal for many cases, i.e. when we calculate cross correlation between signals, when we do beamforming to find out the direction of the energy comes, when we use back-projection to track the source of an earthquake, etc. One easy way to shift the signal is in the frequency domain. In this blog, I will show you how to shift an signal in the freuqnecy domain.</p>
+<h3 id="The-theory-behind-it">The theory behind it<a class="anchor-link" href="#The-theory-behind-it">&#182;</a></h3><p>When we do a Fast Fourier Transform (FFT), we actually map a finite length of time domain samples into an equal length sequence of frequency domain samples.</p>
+$$X[k]=\sum_{n = 0}^{N−1}  x[n]e^{\frac{−j2πnk}{N}}=A_ke^{jϕ_k}$$<p>A property of the Fourier transform is that, a delay in the time domain maps to a phase shift in the frequency domain. For the DFT, this property is:</p>
+$$x[n]↔X[k]$$$$x[n−D]↔e^{\frac{−j2πnkD}{N}}X[k]$$<p>This is to say, if we delay our input signal by D samples in the time domain, it is equavalent to each complex value in the FFT of the signal is multiplied by the constant $$e^{\frac{−j2πnkD}{N}}$$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">nextpow2</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Find the next power 2 number for FFT</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">:</span> <span class="n">n</span> <span class="o">*=</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">n</span>
+
+<span class="k">def</span> <span class="nf">shift_signal_in_frequency_domain</span><span class="p">(</span><span class="n">datin</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This is function to shift a signal in frequency domain. </span>
+<span class="sd">    The idea is in the frequency domain, </span>
+<span class="sd">    we just multiply the signal with the phase shift. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">Nin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">datin</span><span class="p">)</span> 
+    
+    <span class="c"># get the next power 2 number for fft</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">nextpow2</span><span class="p">(</span><span class="n">Nin</span> <span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">shift</span><span class="p">)))</span>
+    
+    <span class="c"># do the fft</span>
+    <span class="n">fdatin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">datin</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+    
+    <span class="c"># get the phase shift, shift here is D in the above explaination</span>
+    <span class="n">ik</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)])</span> <span class="o">/</span> <span class="n">N</span> 
+    <span class="n">fshift</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">ik</span><span class="o">*</span><span class="n">shift</span><span class="p">)</span>
+        
+    <span class="c"># multiple the signal with shift and transform it back to time domain</span>
+    <span class="n">datout</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">fshift</span> <span class="o">*</span> <span class="n">fdatin</span><span class="p">))</span>
+    
+    <span class="c"># only get the data have the same length as the input signal</span>
+    <span class="n">datout</span> <span class="o">=</span> <span class="n">datout</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">Nin</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">datout</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">Fs</span> <span class="o">=</span> <span class="mf">150.0</span><span class="p">;</span>  <span class="c"># sampling rate</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">Fs</span><span class="p">;</span> <span class="c"># sampling interval</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Ts</span><span class="p">)</span> <span class="c"># time vector</span>
+
+<span class="n">ff</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>   <span class="c"># frequency of the signal</span>
+
+<span class="c"># let&#39;s generate a sine signal</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">ff</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c"># shift the signal in the frequency domain by 20 samples</span>
+<span class="n">y_shift</span> <span class="o">=</span> <span class="n">shift_signal_in_frequency_domain</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y_shift</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s">&#39;y_shift&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;Sample&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;Amplitude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="References">References<a class="anchor-link" href="#References">&#182;</a></h3><p>Good explaination at stackexchange:
+<a href="http://dsp.stackexchange.com/questions/509/what-effect-does-a-delay-in-the-time-domain-have-in-the-frequency-domain">http://dsp.stackexchange.com/questions/509/what-effect-does-a-delay-in-the-time-domain-have-in-the-frequency-domain</a></p>
+
+</div>
+</div>
+</div>
