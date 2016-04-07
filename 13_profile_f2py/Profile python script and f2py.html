@@ -1,0 +1,692 @@
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This example is prepared by <a href="https://github.com/qingkaikong/">Qingkai Kong</a> (qingkai.kong@gmail.com) from <a href="http://seismo.berkeley.edu/">Berkeley Seismological Lab</a> for the lightning talk at <a href="http://www.thehackerwithin.org/berkeley/">The Hacker Within</a> at BIDS on April 6th 2016.</p>
+<blockquote><p>The purpose of this script is to show how I usually do to speedup my python script. And hope this is useful to you.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Line_profiler">Line_profiler<a class="anchor-link" href="#Line_profiler">&#182;</a></h2><p>Many times, you find your python script is slow, but you just don't know which part drags the whole performance down. To get an idea, I usually use the <a href="https://github.com/rkern/line_profiler">line_profiler</a> from Robert Kern, this is really good if you want to identify which line uses more time than you expceted, and how often each line executed. Here's a blog talking about profile python <a href="http://marcobonzanini.com/2015/01/05/my-python-code-is-slow-tips-for-profiling/">Marco Bonzanini</a></p>
+<p>You can use line_profiler either in command line or in ipython notebook.</p>
+<h3 id="1-Command-line">1 Command line<a class="anchor-link" href="#1-Command-line">&#182;</a></h3><p>In a typical workflow, one only cares about line timings of a few functions because wading through the results of timing every single line of code would be overwhelming. However, LineProfiler does need to be explicitly told what functions to profile. The easiest way to get started is to use the kernprof script.</p>
+<p>Steps:</p>
+<blockquote><ol>
+<li>in your script, you decorate the functions you want to profile with @profile. For example:<div class="highlight"><pre><span class="nd">@profile</span>
+<span class="k">def</span> <span class="nf">function_to_profile</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+ <span class="o">...</span>
+</pre></div>
+</li>
+<li>Run the following command in the terminal:<div class="highlight"><pre>kernprof -v -l profile_test.py
+</pre></div>
+</li>
+</ol>
+</blockquote>
+<h3 id="2-Run-in-Ipython-notebook">2 Run in Ipython notebook<a class="anchor-link" href="#2-Run-in-Ipython-notebook">&#182;</a></h3><p>To run line_profiler in the notebook, you need load the extension first, and then use the magic commands %lprun to profile the script.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">load_ext</span> line_profiler
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">example_function</span><span class="p">(</span><span class="n">myRange</span><span class="p">):</span>
+    <span class="c"># directly convert range to string list</span>
+    <span class="n">str_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">myRange</span><span class="p">:</span>
+        <span class="n">str_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        
+<span class="k">def</span> <span class="nf">example_function2</span><span class="p">(</span><span class="n">myRange</span><span class="p">):</span>
+    <span class="c"># use list comprehension to convert range to string list</span>
+    <span class="n">str_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">myRange</span><span class="p">]</span> 
+        
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">lprun</span> -f example_function example_function(range(1000000))
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">lprun</span> -f example_function2 example_function2(range(1000000))
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-f2py">Using f2py<a class="anchor-link" href="#Using-f2py">&#182;</a></h2><p>f2py - Fortran to Python interface generator, is used to call Fortran 77/90/95 external subroutines and Fortran 90/95 module subroutines as well as C functions. It is part of the Numpy now. You can find more details <a href="http://docs.scipy.org/doc/numpy-dev/f2py/">here</a>.</p>
+<p>Let's grab the example from the above link, and compare a python version and a fortran version for speed.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Python-version">Python version<a class="anchor-link" href="#Python-version">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    CALCULATE FIRST N FIBONACCI NUMBERS</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            
+    <span class="k">return</span> <span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">dat_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+<span class="n">dat_out</span> <span class="o">=</span> <span class="n">fib</span><span class="p">(</span><span class="n">dat_in</span><span class="p">)</span>
+<span class="n">dat_out</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([  0.,   1.,   1.,   2.,   3.,   5.,   8.,  13.,  21.,  34.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">dat_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">lprun</span> -f fib fib(dat_in)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fortran-version">Fortran version<a class="anchor-link" href="#Fortran-version">&#182;</a></h3><p>let's first write a simple fortran subroutine</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">!</span>ls
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Profile python script and f2py.ipynb example.py
+README.md
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%%</span><span class="k">writefile</span> fib1.f
+C FILE: FIB1.F
+      SUBROUTINE FIB(A,N)
+C
+C     CALCULATE FIRST N FIBONACCI NUMBERS
+C
+      INTEGER N
+      REAL*8 A(N)
+      DO I=1,N
+         IF (I.EQ.1) THEN
+            A(I) = 0.0D0
+         ELSEIF (I.EQ.2) THEN
+            A(I) = 1.0D0
+         ELSE 
+            A(I) = A(I-1) + A(I-2)
+         ENDIF
+      ENDDO
+      END
+C END FILE FIB1.F
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing fib1.f
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">!</span>f2py -c fib1.f -m fib1
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>running build</span>
+running config_cc</span>
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options</span>
+running config_fc</span>
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options</span>
+running build_src</span>
+build_src</span>
+building extension &quot;fib1&quot; sources</span>
+f2py options: []</span>
+f2py:&gt; /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7</span>
+Reading fortran codes...
+	Reading file &apos;fib1.f&apos; (format:fix,strict)
+Post-processing...
+	Block: fib1
+			Block: fib
+Post-processing (stage 2)...
+Building modules...
+	Building module &quot;fib1&quot;...
+		Constructing wrapper function &quot;fib&quot;...
+		  fib(a,[n])
+	Wrote C/API module &quot;fib1&quot; to file &quot;/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c&quot;
+  adding &apos;/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.c&apos; to sources.</span>
+  adding &apos;/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7&apos; to include_dirs.</span>
+copying /Library/Python/2.7/site-packages/numpy/f2py/src/fortranobject.c -&gt; /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7</span>
+copying /Library/Python/2.7/site-packages/numpy/f2py/src/fortranobject.h -&gt; /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7</span>
+build_src: building npy-pkg config files</span>
+running build_ext</span>
+customize UnixCCompiler</span>
+customize UnixCCompiler using build_ext</span>
+customize Gnu95FCompiler</span>
+Found executable /usr/local/bin/gfortran</span>
+customize Gnu95FCompiler</span>
+customize Gnu95FCompiler using build_ext</span>
+building &apos;fib1&apos; extension</span>
+compiling C sources</span>
+C compiler: cc -fno-strict-aliasing -fno-common -dynamic -arch x86_64 -arch i386 -g -Os -pipe -fno-common -fno-strict-aliasing -fwrapv -DENABLE_DTRACE -DMACOSX -DNDEBUG -Wall -Wstrict-prototypes -Wshorten-64-to-32 -DNDEBUG -g -fwrapv -Os -Wall -Wstrict-prototypes -DENABLE_DTRACE -arch x86_64 -arch i386 -pipe
+</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ</span>
+creating /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7</span>
+compile options: &apos;-I/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7 -I/Library/Python/2.7/site-packages/numpy/core/include -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c&apos;</span>
+cc: /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c</span>
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:19:
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.h:13:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1777:
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: &quot;Using deprecated NumPy API, disable it by &quot;          &quot;#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION&quot; [-W#warnings]
+#warning &quot;Using deprecated NumPy API, disable it by &quot; \
+ ^
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:122:12: warning: implicit conversion loses integer precision: &apos;npy_intp&apos; (aka &apos;long&apos;) to &apos;npy_int&apos; (aka &apos;int&apos;) [-Wshorten-64-to-32]
+      sz = PyArray_SIZE(var);
+         ~ ^~~~~~~~~~~~~~~~~
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:91:25: note: expanded from macro &apos;PyArray_SIZE&apos;
+#define PyArray_SIZE(m) PyArray_MultiplyList(PyArray_DIMS(m), PyArray_NDIM(m))
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/__multiarray_api.h:1029:9: note: expanded from macro &apos;PyArray_MultiplyList&apos;
+        (*(npy_intp (*)(npy_intp *, int)) \
+        ^
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:128:14: warning: implicit conversion loses integer precision: &apos;npy_intp&apos; (aka &apos;long&apos;) to &apos;npy_int&apos; (aka &apos;int&apos;) [-Wshorten-64-to-32]
+        sz = PyArray_DIM(var, dim-1);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1526:29: note: expanded from macro &apos;PyArray_DIM&apos;
+#define PyArray_DIM(obj,n) (PyArray_DIMS(obj)[n])
+                            ^~~~~~~~~~~~~~~~~~~~
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1524:27: note: expanded from macro &apos;PyArray_DIMS&apos;
+#define PyArray_DIMS(obj) (((PyArrayObject_fields *)(obj))-&gt;dimensions)
+                          ^
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:144:10: warning: implicit conversion loses integer precision: &apos;long&apos; to &apos;int&apos; [-Wshorten-64-to-32]
+    *v = PyInt_AS_LONG(tmp);
+       ~ ^~~~~~~~~~~~~~~~~~
+/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7/intobject.h:52:51: note: expanded from macro &apos;PyInt_AS_LONG&apos;
+#define PyInt_AS_LONG(op) (((PyIntObject *)(op))-&gt;ob_ival)
+                           ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:232:30: warning: implicit conversion loses integer precision: &apos;npy_intp&apos; (aka &apos;long&apos;) to &apos;int&apos; [-Wshorten-64-to-32]
+  if (n_capi == Py_None) n = len(a); else
+                           ~ ^~~~~~
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:73:18: note: expanded from macro &apos;len&apos;
+#define len(var) shape(var,0)
+                 ^~~~~~~~~~~~
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:69:24: note: expanded from macro &apos;shape&apos;
+#define shape(var,dim) var ## _Dims[dim]
+                       ^~~~~~~~~~~~~~~~~
+&lt;scratch space&gt;:100:1: note: expanded from here
+a_Dims
+^
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:112:12: warning: unused function &apos;f2py_size&apos; [-Wunused-function]
+static int f2py_size(PyArrayObject* var, ...)
+           ^
+6 warnings generated.
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:19:
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.h:13:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1777:
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: &quot;Using deprecated NumPy API, disable it by &quot;          &quot;#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION&quot; [-W#warnings]
+#warning &quot;Using deprecated NumPy API, disable it by &quot; \
+ ^
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.c:112:12: warning: unused function &apos;f2py_size&apos; [-Wunused-function]
+static int f2py_size(PyArrayObject* var, ...)
+           ^
+2 warnings generated.
+cc: /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.c</span>
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.c:2:
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.h:13:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1777:
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: &quot;Using deprecated NumPy API, disable it by &quot;          &quot;#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION&quot; [-W#warnings]
+#warning &quot;Using deprecated NumPy API, disable it by &quot; \
+ ^
+/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.c:60:73: warning: implicit conversion loses integer precision: &apos;npy_intp&apos; (aka &apos;long&apos;) to &apos;int&apos; [-Wshorten-64-to-32]
+                                    NPY_STRING, NULL, fp-&gt;defs[i].data, fp-&gt;defs[i].dims.d[n],
+                                                                        ^~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.c:2:
+In file included from /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.h:13:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:18:
+In file included from /Library/Python/2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1777:
+/Library/Python/2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: &quot;Using deprecated NumPy API, disable it by &quot;          &quot;#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION&quot; [-W#warnings]
+#warning &quot;Using deprecated NumPy API, disable it by &quot; \
+ ^
+1 warning generated.
+compiling Fortran sources</span>
+Fortran f77 compiler: /usr/local/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -arch x86_64 -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/local/bin/gfortran -Wall -g -fno-second-underscore -arch x86_64 -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/local/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -Wall -g -fno-second-underscore -arch x86_64 -fPIC -O3 -funroll-loops</span>
+compile options: &apos;-I/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7 -I/Library/Python/2.7/site-packages/numpy/core/include -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c&apos;</span>
+gfortran:f77: fib1.f</span>
+/usr/local/bin/gfortran -Wall -g -arch x86_64 -Wall -g -undefined dynamic_lookup -bundle /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fib1module.o /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/src.macosx-10.10-intel-2.7/fortranobject.o /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ/fib1.o -L/usr/local/Cellar/gcc/5.3.0/lib/gcc/5/gcc/x86_64-apple-darwin14.5.0/5.3.0 -lgfortran -o ./fib1.so</span>
+Removing build directory /var/folders/xh/r5lqt0053l5d6xf9tq49tkgm0000gn/T/tmpKc3cnJ
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">!</span>ls
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Profile python script and f2py.ipynb fib1.f
+README.md                            <span class="ansired">fib1.so</span>
+example.py                           <span class="ansiblue">fib1.so.dSYM</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can see it created an python interface fib1.so. Now you can import the function into python.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">fib1</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="n">fib1</span><span class="o">.</span><span class="n">fib</span><span class="o">.</span><span class="n">__doc__</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>fib(a,[n])
+
+Wrapper for &#96;&#96;fib&#96;&#96;.
+
+Parameters
+----------
+a : input rank-1 array(&apos;d&apos;) with bounds (n)
+
+Other Parameters
+----------------
+n : input int, optional
+    Default: len(a)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">fib1</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">a</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([  0.,   1.,   1.,   2.,   3.,   5.,   8.,  13.,  21.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's compare the time of both function, we can see for this exmaple, the fortran version is about 100 times faster than the python version.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">timeit</span> fib1.fib(a)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>100000 loops, best of 3: 2.66 µs per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">timeit</span> fib(a)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1000 loops, best of 3: 363 µs per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="My-workflow">My workflow<a class="anchor-link" href="#My-workflow">&#182;</a></h2><p>When I start some script, I usually use the following workflow to speedup:</p>
+<ol>
+<li>write python script</li>
+<li>profile it line by line</li>
+<li>finding some stupid thing that can be easily fix (I found this many times)</li>
+<li>parallel the part that used a lot of time</li>
+<li>use a f2py to take advantage of the fotran speed</li>
+</ol>
+
+</div>
+</div>
+</div>
