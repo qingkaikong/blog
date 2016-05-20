@@ -1,0 +1,1 @@
+In this blog entry, I found a great module for adding a progress bar for the loops. You can find the details at tqdm at their [Github](https://github.com/noamraph/tqdm) 
