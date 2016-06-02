@@ -1,0 +1,1 @@
+We talked in the [previous blog](http://qingkaikong.blogspot.com/2016/02/plot-earthquake-heatmap-on-basemap-and.html) how to query the USGS earthquake, and plot on the map. Using folium, it is very simple to plot a quick heatmap, in the following we will show how to do that, and you can checkout the script at Qingkai's Github. 
