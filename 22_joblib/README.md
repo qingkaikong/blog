@@ -1,0 +1,1 @@
+This week, I found a nice python module to do quick parallel computing - [joblib](https://pythonhosted.org/joblib/parallel.html). I used to do parallel computing using python [Multiprocessing](https://docs.python.org/2/library/multiprocessing.html) module. But for a quick dirty way to parallel for loop, joblib is a very nice tool! Here's an example.
