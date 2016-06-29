@@ -1,0 +1,1 @@
+In this blog, let's build on the blog from last week that we add a layer control to turn on/off the intensity layer we overlay on the map. All we need is to add two lines to have this control.
