@@ -128,3 +128,9 @@ View after you close the editor:
 Now if you check git log again:
 
 ![FigureS6](./figures/FigureS7_Show_git_log_after_squash.png)
+
+# Acknowledgements  
+I learned most of my git skills from:  
+
+* Folks at [Deutsche Telekom Silicon Valley Innovation Center](http://t-labs.us/team.html)  
+* [Filipe Fernandes](http://ocefpaf.github.io/homepage/)
