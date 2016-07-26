@@ -6,8 +6,6 @@ There are many ways you can work on a forked repo, i.e. you can either clone it 
 
 ## Work flow using GIT 
 
----
-
 ### (1) Fork the project on the github website  
 
 Press the button on the upper right corner (circled by the red), then you will have this repo in your account, it is more like copy it to your own collection, so that you can mess up with it ^)^ without affect the original repo.    
@@ -90,7 +88,6 @@ $ # or you can simply 'git push' and follow the instructions from git
 
 These notes are part of my workflow as well, it is aimed to create better and clearer PR. 
 
----
 ### Check your code before you create a PR  
 It is good practice to remove all the unnecessary spaces in your code, you can do this using git show, and the red boxes indicate that you introduced unnecessary spaces that you need delete them. 
 
@@ -136,5 +133,5 @@ Now if you check git log again:
 # Acknowledgements  
 I learned most of my git skills from:  
 
-* Folks at [Deutsche Telekom Silicon Valley Innovation Center](http://t-labs.us/team.html)  
-* [Filipe Fernandes](http://ocefpaf.github.io/homepage/)
+* Folks at [Deutsche Telekom Silicon Valley Innovation Center](http://t-labs.us/team.html), they are awesome!!!
+* [Filipe Fernandes](http://ocefpaf.github.io/homepage/), I met at Scipy Sprints, he is great, taught me a lot of things \^)^
