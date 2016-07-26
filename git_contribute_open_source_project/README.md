@@ -102,4 +102,13 @@ $ git rebase -i 6bb2d90052b3f36bf449155bf2b0f938cbecb78e
 
 ``` 
 ![FigureS4](./figures/FigureS4_Interactive_rebase_a.png) 
-The options are clear, we can either choose 's' to squash, and then delete the 2nd commit, or just fix it using 'f', which ignore the 2nd commit. 
+The options are clear, we can either choose 's' to squash, and then delete the 2nd commit, or just fix it using 'f', which ignore the 2nd commit. Let's change this in the editor, and close the editor. 
+
+![FigureS5](./figures/FigureS5_Interactive_rebase_b.png)
+View after you close the editor:
+
+
+![FigureS6](./figures/FigureS6_After_squash.png)
+Now if you check git log again:
+
+![FigureS6](./figures/FigureS7_Show_git_log_after_squash.png)
