@@ -2,13 +2,13 @@
 
 [Git](https://git-scm.com/) is a nice version control tool to work with, but how to use it collaboratively with others, and contribute to some open source project using git has a steep learning curve, here, I will summary the main steps how you can contribute to a project.     
 
-There are many ways you can work on a forked repo, i.e. you can either clone it to a virtual environment, or copy it directly to you machine and add it to your path. I like clone the repo directly to my mac, and work inside the folder. Here, I will give a summary of my work flow when contribute to open source projects. I will use [Folium](https://github.com/python-visualization/folium) as an example. 
+There are many ways you can work on a forked repo, i.e. you can either clone it to a virtual environment, or copy it directly to you machine and add it to your path. I like to clone the repo directly to my mac, and work inside the folder. Here, I will give a summary of my work flow when contributing to an open source projects. I will use [Folium](https://github.com/python-visualization/folium) as an example. 
 
 ## Work flow using GIT 
 
 ### (1) Fork the project on the github website  
 
-Press the button on the upper right corner (circled by the red), then you will have this repo in your account, it is more like copy it to your own collection, so that you can mess up with it ^)^ without affect the original repo.    
+Press the button on the upper right corner (circled by the red), then you will have this repo in your account, it is more like copying it to your own collection, so that you can mess up with it ^)^ without changing the original repo.    
 
 ![Figure1](./figures/Figure1_Fork_project.png)  
 
@@ -68,7 +68,7 @@ $ git commit -m 'add changes XXX'
 
 ---
 ### (7) Sync with the upstream master before you push   
-Since other people may also work on this project, and merged some new things into the upstream master already, therefore, you need sync with the upstream master before push to avoid conflict. 
+Since others may also work on this project, and merged some new things into the upstream master already, you need sync with the upstream master before pushing to avoid conflicts. 
 
 ```bash
 $ # this will get all the latest updates from the upstream repo
@@ -90,7 +90,7 @@ $ # or you can simply 'git push' and follow the instructions from git
 
 ---
 ### (9) Make more changes after PR created   
-After you created a PR, anything you commit in this branch from now will be attached to the current PR. For example, after you create this PR, you make some more changes to a file, and commit it as 'commit A'. This commit A will automatically attached to this PR when you push it to github. Therefore, a rule is that: a single branch, will be a single PR. And now, if you want to make some other changes, you should make a new branch from the master (Note: **make a new branch from master! Not from current branch**). If you create a new branch from the current branch (fix_some_problem branch), any commit will be attached to the PR created from this 'fix_some_problem' branch! This is why never work on the master, keep it clean as a base for other modifications. 
+After you created a PR, anything you commit in this branch from now will be attached to the current PR. For example, if you make some changes to a file, and commit it as 'commit A'. The commit A will automatically attached to this PR when you push it to github. Therefore, a rule is that: a single branch, will be a single PR. And now, if you want to make some other changes, you should make a new branch from the master (Note: **make a new branch from master! Not from current branch**). If you create a new branch from the current branch (fix_some_problem branch), any commit will be attached to the PR created from this 'fix_some_problem' branch! This is why never work on the master, keep it clean as a base for other modifications. 
 
 ```bash
 $ git checkout master
@@ -123,7 +123,7 @@ $ git commit -m 'abc'
 $ # show the log history
 $ git log
 ```  
-The reason we commit with 'abc' is because we will later squash this commit into the previous one, so you can call it anything.  
+The reason we commit with 'abc' is because we will later squash this commit into the previous one, so the name here is a placeholder that will be removed.  
 
 ![FigureS2](./figures/FigureS2_Remove_spaces.png)  
 
@@ -155,4 +155,4 @@ Now if you check git log again:
 I learned most of my git skills from:  
 
 * Folks at [Deutsche Telekom Silicon Valley Innovation Center](http://t-labs.us/team.html), they are awesome!!!
-* [Filipe Fernandes](http://ocefpaf.github.io/homepage/), I met at Scipy Sprints, he is great, taught me a lot of things \^)^
+* And sprinting at SciPy 2016 ;-)
