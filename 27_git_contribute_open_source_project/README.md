@@ -84,6 +84,15 @@ $ # or you can simply 'git push' and follow the instructions from git
 ```
 
 ---
+### (9) Make more changes after PR created   
+After you created a PR, anything you commit in this branch from now will be attached to the current PR. For example, after you create this PR, you make some more changes to a file, and commit it as 'commit A'. This commit A will automatically attached to this PR when you push it to github. Therefore, a rule is that: a single branch, will be a single PR. And now, if you want to make some other changes, you should make a new branch from the master (Note: **make a new branch from master! Not from current branch**). If you create a new branch from the current branch (fix_some_problem banch), any commit will be attached to the PR created from this 'fix_some_problem' branch! This is why never work on the master, keep it clean as a base for other modifications. 
+
+```bash
+$ git checkout master
+$ git checkout -b fix_a_different_problme
+```
+
+---
 ## Some notes before create a PR  
 
 These notes are part of my workflow as well, it is aimed to create better and clearer PR. 
