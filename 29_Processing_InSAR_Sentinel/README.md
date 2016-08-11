@@ -1,0 +1,4 @@
+I learned processing [InSAR](https://en.wikipedia.org/wiki/Interferometric_synthetic_aperture_radar) data in the [shortcourse](https://www.unavco.org/education/advancing-geodetic-skills/short-courses/2016/insar-gmtsar/insar-gmtsar.html) at [Scripps](https://scripps.ucsd.edu/) using the [GMTSAR](http://topex.ucsd.edu/gmtsar/). In this blog, I will write down the steps I uesed to process the [Sentinel-1A](https://en.wikipedia.org/wiki/Sentinel-1A) data for my own reference. I will use the [2016 Taiwan M6.4 Meinong earthquake](https://en.wikipedia.org/wiki/2016_Taiwan_earthquake) as an example.      
+
+**Step 1 - get data**   
+There are multiple ways to get the data. The most common way is to use the [GUI](http://web-services.unavco.org/brokered/ssara/gui) or use the [API](https://github.com/bakerunavco/SSARA) directly. For this earthquake, we will try to use the GUI to download 
