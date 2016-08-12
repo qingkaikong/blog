@@ -1,9 +1,9 @@
-I learned processing [InSAR](https://en.wikipedia.org/wiki/Interferometric_synthetic_aperture_radar) data in the [shortcourse](https://www.unavco.org/education/advancing-geodetic-skills/short-courses/2016/insar-gmtsar/insar-gmtsar.html) at [Scripps](https://scripps.ucsd.edu/) using the [GMTSAR](http://topex.ucsd.edu/gmtsar/). In this blog, I will write down the steps I uesed to process the [Sentinel-1A](https://en.wikipedia.org/wiki/Sentinel-1A) data for my own reference. I will use the [2016 Taiwan M6.4 Meinong earthquake](https://en.wikipedia.org/wiki/2016_Taiwan_earthquake) as an example.      
+I learned processing [InSAR](https://en.wikipedia.org/wiki/Interferometric_synthetic_aperture_radar) data in the [short course](https://www.unavco.org/education/advancing-geodetic-skills/short-courses/2016/insar-gmtsar/insar-gmtsar.html) at [Scripps](https://scripps.ucsd.edu/) using the [GMTSAR](http://topex.ucsd.edu/gmtsar/). In this blog, I will write down the steps I used to process the [Sentinel-1A](https://en.wikipedia.org/wiki/Sentinel-1A) data for my own reference. I will use the [2016 Taiwan M6.4 Meinong earthquake](https://en.wikipedia.org/wiki/2016_Taiwan_earthquake) as an example.      
 
 ## **Step 1 - get data**   
-There are multiple ways to get the data. The most common way is to use the [GUI](http://web-services.unavco.org/brokered/ssara/gui) or use the [API](https://github.com/bakerunavco/SSARA) directly. For this earthquake, we will try to use the GUI to download the Sentinel-1A data. We first draw a polygon around the earthquake regiion as shown in the following figure. Since the earthquake occured on Feb 5th, we put our search range from Feb 1 - Feb 17. Because we only use the SLC processing level, so I changed the 'Processing Level' to 'SLC'.  
+There are multiple ways to get the data. The most common way is to use the [GUI](http://web-services.unavco.org/brokered/ssara/gui) or use the [API](https://github.com/bakerunavco/SSARA) directly. For this earthquake, we will try to use the GUI to download the Sentinel-1A data. We first draw a polygon around the earthquake region as shown in the following figure. Since the earthquake occurred on Feb 5th, we put our search range from Feb 1 - Feb 17. Because we only use the SLC processing level, so I changed the 'Processing Level' to 'SLC'.  
 ![alt text](./figures/figure_1.png "Search GUI")  
-After you pressed the search button, you will get a list of available data within the range, shown below. When you select any of the record, it will highlight on the map as the black box. Scoll to the right, you will see the download button two download the data. Because we want to download the data that can reflect the deformation caused by the earthquake, therefore, we need both the data before the earthquake, and after. By looking at the Ascending path, we have Feb 2nd and Feb 14th satisfy the requirement (Note: You should choose both from the same path, either Ascedning or Descending). Then go ahead to download the data (about 10 Gb).     
+After you pressed the search button, you will get a list of available data within the range, shown below. When you select any of the record, it will highlight on the map as the black box. Scroll to the right, you will see the download button two download the data. Because we want to download the data that can reflect the deformation caused by the earthquake, therefore, we need both the data before the earthquake, and after. By looking at the Ascending path, we have Feb 2nd and Feb 14th satisfy the requirement (Note: You should choose both from the same path, either Ascending or Descending). Then go ahead to download the data (about 10 Gb).     
 ![alt text](./figures/figure_2.png "Search results")   
 ## **Step 2 - get the orbit data**  
 You also need the orbits data before processing, which you can download it [here](https://www.unavco.org/data/imaging/sar/lts1/winsar/s1qc/aux_poeorb/). The naming of the orbits data is like
@@ -78,13 +78,14 @@ Now, if everything works fine, you can step into the last step: run the processi
 
 ## **Results**  
 After all the above steps, you will find in each of the subswath folder (i.e., F1, F2, and F3), there are two more folders: intf, SLC. Most of the results figures/data are stored in the intf folder. Here are my results:  
-**wrapped fringes:** 
-![alt text](./figures/phasefilt_mask_ll.png "Wrapped fringes")
-**unwrapped:** 
-![alt text](./figures/unwrap_mask_ll.png "unwrapped")
+**wrapped fringes:**   
+![alt text](./figures/phasefilt_mask_ll_TW.png "Wrapped fringes")  
+**unwrapped:**   
+![alt text](./figures/unwrap_mask_ll_TW.png "unwrapped")  
 
 ## **Acknowledgement**  
 Thank:  
 [UNAVCO](http://www.unavco.org/) for providing the financial support.  
 [GMTSAR developer team](http://topex.ucsd.edu/gmtsar/) for the great workshop.  
-[GMT team](https://www.soest.hawaii.edu/gmt/) for great support!
+[GMT team](https://www.soest.hawaii.edu/gmt/) for great support!  
+![alt text](./figures/UNAVCO.jpg "UNAVCO")
