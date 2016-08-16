@@ -25,4 +25,11 @@ A time series library for the Python programming language.
 [**Carousel**](https://github.com/SunPower/Carousel)  
 Model Simulation Framework  
 
+[**ParseHub**](https://www.parsehub.com/)  
+Easily extract data from any website.  
+
+[**Docplex**](https://github.com/IBMDecisionOptimization/docplex-examples)   
+With this library, you can quickly and easily add the power of optimization to your application.   
+
 [3D XPoints](https://en.wikipedia.org/wiki/3D_XPoint)
+
