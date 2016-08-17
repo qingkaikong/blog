@@ -1,7 +1,6 @@
 ##PyData 
 
-I attended [PyData San Francisco 2016](http://pydata.org/sfo2016/). Here are also some interesting things I learned from this conference.  
-
+I attended [PyData San Francisco 2016](http://pydata.org/sfo2016/). It is a nice short 2 day conference, even though I only made for the first day. Here are also some interesting things I learned from this conference.  
 
 ### Packages  
 [**The Journal of Open Source Software**](http://joss.theoj.org/about)  
@@ -31,5 +30,7 @@ Easily extract data from any website.
 [**Docplex**](https://github.com/IBMDecisionOptimization/docplex-examples)   
 With this library, you can quickly and easily add the power of optimization to your application.   
 
-[3D XPoints](https://en.wikipedia.org/wiki/3D_XPoint)
+[3D XPoints](https://en.wikipedia.org/wiki/3D_XPoint)  
+The next generation of storage that will revolutionize computing.  
 
+The video of the talks are still not available. I will link some of the interesting talks from my point of view here when they are online.   
