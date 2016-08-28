@@ -6,14 +6,19 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	Let's use [Lasso (L1 norm)](https://en.wikipedia.org/wiki/Lasso_(statistics)) or [Ridge (L2 norm)](https://en.wikipedia.org/wiki/Tikhonov_regularization) regression as an example. As we know, Lasso works by setting some of the parameters to very small number, or even zero, which means it is doing an internal feature selection to give you a subset of the features to work with. This small set of features makes your model less flexible, but less sensitive to the changes of the data (reduce the variance). Ridge regression is similar, but different in that it can not set the parameters to zero (it can set the parameters really small though). This is means it gives less weight on some of the parameters, in other words, treat them as nothing. It achieves the same goal of making the model less flexible to reduce the overfitting.  
 
 2. **Which data scientists do you admire most? which startups?**  
-	The following is a short list of my hero in this field (no purticular order, I just randomly think who I will add here), it may different from yours, or even missing some big figures. But remember, this is my list!  
+	The following is a short list of my hero in this field (no particular order, I just randomly think who I will add here), it may different from yours, or even missing some big figures. But remember, this is my list!   
+	
 	[**Geoff Hinton**](http://www.cs.toronto.edu/~hinton/), from University of Toronto, who is one of the main force to push neural network, and deep learning forward. I especially love this [video - The Deep Learning Saga](https://www.youtube.com/watch?v=mlXzufEk-2E)  
-	[**Michael Jordan**](https://people.eecs.berkeley.edu/~jordan/) from UC Berkely. Just look at the list of his past students and postdocs, you will realize how many great experts he taught before! I took his class before, but at that moment, I can not understand all!  
+	[**Michael Jordan**](https://people.eecs.berkeley.edu/~jordan/) from UC Berkeley. Just look at the list of his past students and postdocs, you will realize how many great experts he taught before! I took his class before, but at that moment, I can not understand all!  
 	[**Trevor Hastie**](https://en.wikipedia.org/wiki/Trevor_Hastie) and [**Robert Tibshirani**](https://en.wikipedia.org/wiki/Robert_Tibshirani) I learned most of my machine learning knowledge from their books - [An introduction to Statistical Learning](https://www.amazon.com/Introduction-Statistical-Learning-Applications-Statistics/dp/1461471370/ref=sr_1_4?ie=UTF8&qid=1472255536&sr=8-4&keywords=Robert+Tibshirani) and [The Elements of Statistical Learning](https://www.amazon.com/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/ref=sr_1_1?ie=UTF8&qid=1472255536&sr=8-1&keywords=Robert+Tibshirani). If you don't know who invented Lasso method we just talked above, google it!  
-	[**Andrew Ng**](http://www.andrewng.org/), from Stanford. Most people knows Andrew probabaly from the coursera machine learning course. Recently, he is very active in machine learning field.   
+	[**Andrew Ng**](http://www.andrewng.org/), from Stanford. Most people knows Andrew probably from the Coursera machine learning course. Recently, he is very active in machine learning field.   
 	[**Tom M. Mitchell**](http://www.cs.cmu.edu/~tom/), from Carnegie Mellon University. I first know him is from his book [machine learning](https://www.amazon.com/Machine-Learning-Tom-M-Mitchell/dp/0070428077/ref=sr_1_12?ie=UTF8&qid=1472394494&sr=8-12&keywords=machine+learning), a very readable introduction.     
 	[**Yann LeCun**](https://en.wikipedia.org/wiki/Yann_LeCun), another driving force in deep learning. He is best known for his contribution in the convulutional neural networks.   
-	[**Christopher Bishop**](https://www.microsoft.com/en-us/research/people/cmbishop/), from University of Edinburdh. He was trained as a physists, but then later became an expert in machine learning. His book [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/ref=sr_1_2?ie=UTF8&s=books&qid=1263391804&sr=8-2#reader_0387310738) is another must have if you want to learn machine learning.   
+	[**Christopher Bishop**](https://www.microsoft.com/en-us/research/people/cmbishop/), from University of Edinburdh. He was trained as a physicists, but then later became an expert in machine learning. His book [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/ref=sr_1_2?ie=UTF8&s=books&qid=1263391804&sr=8-2#reader_0387310738) is another must have if you want to learn machine learning.   
+	[**Yaser S. Abu-Mostafa**](http://www.work.caltech.edu/), Caltech. I took his [learning from data](http://www.work.caltech.edu/lectures.html#lectures) online, and it is my first step in machine learning!  
+	[**Jake VanderPlas**](http://staff.washington.edu/jakevdp/), University of Washington. I used so many tutorials and slides from him, thanks!      
+	
+	
 3. **How would you validate a model you created to generate a predictive model of a quantitative outcome variable using multiple regression.**   
 	I usually use [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) or [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) to make sure my multiple regression works well. For determine how many predictors I need, I use [adjusted R^2](https://en.wikipedia.org/wiki/Coefficient_of_determination#Adjusted_R2) as a metrics, and do a feature selection using some of the methods described [here](https://en.wikipedia.org/wiki/Feature_selection). 
 
@@ -64,13 +69,13 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	For more details, there is a very nice paper [The Relationship Between Precision-Recall and ROC Curves](http://pages.cs.wisc.edu/~jdavis/davisgoadrichcamera2.pdf).   
 	  
 5. **How can you prove that one improvement you've brought to an algorithm is really an improvement over not doing anything?**   
-
+	My answer to this question is simply do a [A/B testing](https://www.optimizely.com/ab-testing/). With the same settings (dataset, hardware environment etc.), we can run both the older version of the algorithm and the modified version, and then compare the results in terms of performance (accuracy, speed, usage of resources, etc.).  
 
 6. **What is root cause analysis?**   
-
+	I am not so familiar with this analysis. But it seems a technique to identify the underlying causes of why something occurred (usually bad accidents), so that the most effective solutions can be identified and implemented. It is a method of problem solving used for identifying the root causes, according to [WiKi](https://en.wikipedia.org/wiki/Root_cause_analysis). 
 
 7. **Are you familiar with pricing optimization, price elasticity, inventory management, competitive intelligence? Give examples.**   
-
+	No. 
 
 8. **What is statistical power?**   
 
