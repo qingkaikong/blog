@@ -93,6 +93,11 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	[A gentle introduction to Resampling techniques](http://wise.cgu.edu/wp-content/uploads/2015/04/Introduction-to-Resampling-Techniques-110901.pdf).  
 	[Resampling Statistics](http://userwww.sfsu.edu/efc/classes/biol710/boots/rs-boots.htm).  
 	[Resampling methods: Concepts, Applications, and Justification](http://pareonline.net/getvn.asp?v=8&n=19).  
+	
+	For the limitations,   
+	
+	* Computationally heavy. It is only recent years with the advance of the computer power, the resampling method starts to get porpular.   
+	* Variability due to finite replications. Also, for the validation can be highly variable.   
 
 10. **Is it better to have too many false positives, or too many false negatives? Explain.**    
 	This depends on your need and the consequences of the decision. I will give two examples.   
