@@ -1,4 +1,4 @@
-I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnuggets.com/2016/01/20-questions-to-detect-fake-data-scientists.html) on KDnuggests. Too bad, after I took go through the question lists, I found a lot of them I don't know how to answer, or only can answer partially. Results: I am a fake data scientists !!! :-). Anyway, to pretend I am a less fake one, I decided to prepare all the answers for these questions. Here are my answers, and if you use them to test me again, you will treat me as a genuine data scientists. I put these answers here more like a references/summary for me, if you spot any mistakes, please let me know to make me a better data scientists.     
+I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnuggets.com/2016/01/20-questions-to-detect-fake-data-scientists.html) on KDnuggests. Too bad, after I went through the question lists, I found a lot of them I don't know how to answer, or only can answer partially. Results: I am a fake data scientists !!! :-). Anyway, to pretend I am a less fake one, I decided to prepare all the answers for these questions. Here are my answers, and if you use them to test me again, you will treat me as a genuine data scientists. I put these answers here more like a references/summary for me, if you spot any mistakes, please let me know to make me a better data scientists. Because of the answers are so long, I split this into two posts, here is the first one with the first 10 questions.       
 
 1. **Explain what regularization is and why it is useful.**  
 	A lot of the machine learning problems can be generalized into minimize a loss function to reduce the difference the model output and the true results. My understanding of the regularization is to add more constrains to the loss function to make sure that the parameters of the model can not change freely. This is in a sense reduce the flexible of the model, which means we will increase bias, but reduce variance in the error (to understand the bias and variance trade-off, check out this great blog [here](http://scott.fortmann-roe.com/docs/BiasVariance.html)). If we choose a reasonable regularization, we will get a nice trade-off between the bias and variance, and reduce the overfitting of the unwanted signal (noise) in the data. 
@@ -18,8 +18,51 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	I usually use [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) or [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) to make sure my multiple regression works well. For determine how many predictors I need, I use [adjusted R^2](https://en.wikipedia.org/wiki/Coefficient_of_determination#Adjusted_R2) as a metrics, and do a feature selection using some of the methods described [here](https://en.wikipedia.org/wiki/Feature_selection). 
 
 4. **Explain what precision and recall are. How do they relate to the ROC curve?**   
+	For precision and recall, WiKi already have a nice answer for this, see it [here](https://en.wikipedia.org/wiki/Precision_and_recall). The following figure from WiKi is a very nice illustration of the two concept:     
+	![image](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg "precision and recall")    
+	### Example
+	Let's have a simple example to show this more: if there are 100 iron man, and 100 spider man, and you want to build a model to determine which one is iron man. After you build the model, it shows the results in the following talbe. You can see from the table, we can have 4 different results:  
 	
-
+    * **True positive (TP)**  - If the model determine it is iron man, and it is true iron man. 
+    * **True negative (TN)**  - If the model determine it is spider man, and it is true spider man.
+    * **False positive (FP)** - If the model determine it is iron man, but it is actually a spider man. 
+    * **False negative (FN)** - If the model determine it is spider man, but it is actually an iron man. 
+	
+		|    Est./True    | Iron man | Spider man | 
+		| :-------------: |:--------:| :---------:|
+		| Est. Iron man   |  90 (TP) |   60 (FP)  |
+		| Est. Spider man |  10 (FN) |   40 (TN)  |
+		Est. stands for Estimate
+	
+	We estimated there are 150 Iron man, but in which, 90 of them are true iron man (TP), and 60 of them are actually spider man (FP). And 40 spider man estimates are real (TN), 10 estimates are wrong (FN). Now you can think about this with the above figure.   
+	
+	Let's calculate the Precision and Recall now, Precision is to answer the question 'Within all the iron mans the model estimated, how many of them are real?'. Recall tries to answer 'Within all the real iron mans, how many the model correctly found them?'. (Recall also calls True Positive Rate, Sensitivity)    
+	
+	```
+	Precision = TP / (TP + FP) = 90 / (90 + 60) = 0.6     
+	Recall = TP / (TP + FN) = 90 / (90 + 10) = 0.9
+	```
+	We can see from the results that our model did a decent job of picking out iron man (9 uot of 10 are picked out), but at the same time, it is estimated a lot of the spider man as iron man, which means we have a relatively low precision (only 0.6).   
+	
+	If we plot the Recall on the x-axis, and the Precision on the y-axis while vary the threshold of the model, then we will have a Precision-Recall curve. It is a model-wide measure for evaluation binary classifiers. Of course, we want our model has high Recall and high Precision, that is, we want our model to move close to the right corner on the plot. It usually can alos be used to compare different models, see the example here:  
+	
+	![image](https://classeval.files.wordpress.com/2015/06/two-precision-recall-curves.png?w=520&h=520 "compare model")  
+	Figure is from a nice blog post - [Introduction to the Precision-Recall plot](https://classeval.wordpress.com/introduction/introduction-to-the-precision-recall-plot/). 
+	
+	The ROC curve ([Receiver Operating Characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)) is a plot that illustrates the performance of a binary classifier when the threshold of the classifier is varied. It plots the False Positive Rate (100 - Specificity) on the x-axis, and True Positive Rate (Recall/Sensitivity) on the y-axis. We know how to calculate Recall from above, but for the False Positive Rate, which  tries to answer 'Within all the real spider mans, how many of the model estiamted as iron man?', is calculated as: 
+		
+	```
+	False Positive Rate = FP / (FP + TN) = 60 / (60 + 40) = 0.6     
+	```
+	
+	Therefore, on the ROC curve, we want our model to have a small False Positive Rate, but a large True Positive Rate (Recall), that is, we want our model to move close to the left corner. See an example here from WiKi:
+	
+	![image](https://upload.wikimedia.org/wikipedia/commons/3/36/ROC_space-2.png "ROC curve")
+	
+	We can see the Precision-Recall curve and the ROC curve are closely related with each other, but the key differences between them are lie on what your problem need. If your problem have an inbalanced dataset, that is you have a few of positive samples but a lot of negative samples (100 iron man, and 100000 spide man), and you are more care of finding the iron man out, then you should use Precision-Recall curve. Otherwise, you can use ROC curve. See a nice discussion on Quora [here](https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each).   
+		
+	For more details, there is a very nice paper [The Relationship Between Precision-Recall and ROC Curves](http://pages.cs.wisc.edu/~jdavis/davisgoadrichcamera2.pdf).   
+	  
 5. **How can you prove that one improvement you've brought to an algorithm is really an improvement over not doing anything?**   
 
 
