@@ -107,7 +107,9 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	(2) In a hospital, we want an algorithm to identify if the patient has malignant tumour for futhur treatment. The algorithm will classify the patient either as benign or malignant tumour. If a patient has benign tumour but classified as malignant, this is a false positives. A false negatives is when the patient has a malignant tumour but classified as benign. In this example, we prefer the algorithm to have more false positives. Since the consequence is for the patient to do more tests to confirm. But if we have a high false negatives, we will miss a lot of the patient who has the malignant tumour for the best treatment time.    
    
 11. **What is selection bias, why is it important and how can you avoid it?**     
-
+	From Wikipedia, selection bias is the selection of individuals, groups or data for analysis in such a way that proper randomization is not achieved, thereby ensuring that the sample obtained is not representative of the population intended to be analyzed. There is a very interesting example on [youtube](https://www.youtube.com/watch?v=p52Nep7CBdQ).   
+	
+	Selection bias can cause the researcher to reach wrong conclusion. I think the best way to avoid the selection bias is first to get to know the common bias and how it affects research. [Here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917255/) is a nice review of bias on evidence-based medicine. Though slightly different, a lot of the topics/concepts can be applied to other fields. as well.    
 
 12. **Give an example of how you would use experimental design to answer a question about user behavior.**   
 
