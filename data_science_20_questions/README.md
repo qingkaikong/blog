@@ -115,7 +115,27 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 13. **What is the difference between "long" and "wide" format data?**  
-
+	It is easier to see in an example:   
+	
+	**long format** 
+	
+	|    Name    | Variable | Value | 
+	| :--------  |:--------:| ----:|
+	| Iron man   |   Color  |  red  |
+	| Iron man   | Material |  iron |
+	| Iron man   |   Power  |nuclear|
+	| Iron man   |  Height  | 5'8" |
+	| Spider man |   Color  |  red  |
+	| Spider man | Material | cloth |
+	| Spider man |   Power  |  food |
+	| Spider man |  Height  | 5'10" |
+	
+	**wide format** 
+	
+	|    Name    | Color | Material | Power | Height | 
+	| :--------  |:-----:| :-------:| :---: | -----: |
+	| Iron man   |  red  |   iron   |nuclear|  5'8"  | 
+	| Spider man |  red  |   cloth  | food  |  5'10" | 
 
 14. **What method do you use to determine whether the statistics published in an article (e.g. newspaper) are either wrong or presented to support the author's point of view, rather than correct, comprehensive factual information on a specific subject?**  
 
