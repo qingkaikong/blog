@@ -78,10 +78,21 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	No. 
 
 8. **What is statistical power?**   
-
+	Statistical power is the likelihood that a study will detect an effect when there is an effect there to be detected [refered from here](https://effectsizefaq.com/2010/05/31/what-is-statistical-power/). It depends mainly on the effect size, the sample size. [Here](https://effectsizefaq.com/2010/05/31/what-is-statistical-power/) is a very nice analogy to understand more of the statistical power.  
 
 9. **Explain what resampling methods are and why they are useful. Also explain their limitations.**   
-
+	Resampling methods differs from the classical parametric tests that compare observed statistics to theoretical sampling distributions, it is based on repeated sampling within the same sample to draw the inference. The resampling methods are simpler and more accurate, require fewer assumptions, and have greater generalizability. 
+	
+	Resampling can be used for different purposes, and the most common ones are:  
+	* To validate models - methods like bootstrap, cross-validation. For example, we usually can use 10-Fold cross-validation to validate our model on limited dataset, or to choose a desire parameters. 
+	* Estimating the precision/uncertainty of sample statistics (medians, variance, etc), like jackknife, bootstrap. For example, in order to get a confidence interval of certain parameters we interested, we can use bootstrap to achieve that.     
+	* To test hypotheses of 'no effect', like Permutation which excahnges labels on data points to test statistic under the null hypothesis in order to perform a statistical significance test.   
+	* To approximate the numerical results, like [Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method), which rely on repeated random sampling from the known characteristics. Like in the [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) used in Bayesian statistics, which we can get the posterior distribution by sampling that is impossible to get a analytics solution.  
+	
+	Jake VanderPlas gave a nice talk on PyCon 2016, which briefly touched some parts of the resampling method, you can find the video of the talk [here](https://youtu.be/Iq9DzN6mvYA?t=12m40s), and the slides [here](https://speakerdeck.com/jakevdp/statistics-for-hackers). For further readings:
+	[A gentle introduciton to Resampling techniques](http://wise.cgu.edu/wp-content/uploads/2015/04/Introduction-to-Resampling-Techniques-110901.pdf).  
+	[Resampling Statistics](http://userwww.sfsu.edu/efc/classes/biol710/boots/rs-boots.htm).  
+	[Resampling methods: Concepts, Applications, and Justification](http://pareonline.net/getvn.asp?v=8&n=19).  
 
 10. **Is it better to have too many false positives, or too many false negatives? Explain.**    
 
