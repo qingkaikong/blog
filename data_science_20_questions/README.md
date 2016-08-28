@@ -95,7 +95,11 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	[Resampling methods: Concepts, Applications, and Justification](http://pareonline.net/getvn.asp?v=8&n=19).  
 
 10. **Is it better to have too many false positives, or too many false negatives? Explain.**    
-	This depends on your need. 
+	This depends on your need and the consequences of the decision. I will give two examples.   
+	
+	(1) If we are working in a top secret institution, we have an automatic door that check if the person wants to enter it is a stuff or stranger, and we want to stop the strangers for security reasons - we want to identify the strangers who are not working here. If a staff is stopped by the door, because the algorithm thinks he/she is a stanger, this is the case of false negatives. If the algorithm fails to detect a stanger and let him/her in, this is a false positives. In this example, we'd rather to have many false negatives, that is, stop the staff due to recognize him/her as a stranger. The consequence is just to re-check the staff by authorities. If we have too many false positives, we will have a lot of stangers enter into our institution and may have a big security problem!  
+	
+	(2) In a hospital, we want an algorithm to identify if the patient has malignant tumour for futhur treatment. The algorithm will classify the patient either as benign or malignant tumour. If a patient has benign tumour but classified as malignant, this is a false positives. A false negatives is when the patient has a malignant tumour but classified as benign. In this example, we prefer the algorithm to have more false positives. Since the consequence is for the patient to do more tests to confirm. But if we have a high false negatives, we will miss a lot of the patient who has the malignant tumour for the best treatment time.    
    
 11. **What is selection bias, why is it important and how can you avoid it?**     
 
