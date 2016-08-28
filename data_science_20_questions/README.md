@@ -26,7 +26,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	For precision and recall, WiKi already have a nice answer for this, see it [here](https://en.wikipedia.org/wiki/Precision_and_recall). The following figure from WiKi is a very nice illustration of the two concept:     
 	![image](https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg "precision and recall")    
 	### Example
-	Let's have a simple example to show this more: if there are 100 iron man, and 100 spider man, and you want to build a model to determine which one is iron man. After you build the model, it shows the results in the following talbe. You can see from the table, we can have 4 different results:  
+	Let's have a simple example to show this more: if there are 100 iron man, and 100 spider man, and you want to build a model to determine which one is iron man. After you build the model, it shows the results in the following table. You can see from the table, we can have 4 different results:  
 	
     * **True positive (TP)**  - If the model determine it is iron man, and it is true iron man. 
     * **True negative (TN)**  - If the model determine it is spider man, and it is true spider man.
@@ -47,14 +47,14 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	Precision = TP / (TP + FP) = 90 / (90 + 60) = 0.6     
 	Recall = TP / (TP + FN) = 90 / (90 + 10) = 0.9
 	```
-	We can see from the results that our model did a decent job of picking out iron man (9 uot of 10 are picked out), but at the same time, it is estimated a lot of the spider man as iron man, which means we have a relatively low precision (only 0.6).   
+	We can see from the results that our model did a decent job of picking out iron man (9 out of 10 are picked out), but at the same time, it is estimated a lot of the spider man as iron man, which means we have a relatively low precision (only 0.6).   
 	
-	If we plot the Recall on the x-axis, and the Precision on the y-axis while vary the threshold of the model, then we will have a Precision-Recall curve. It is a model-wide measure for evaluation binary classifiers. Of course, we want our model has high Recall and high Precision, that is, we want our model to move close to the right corner on the plot. It usually can alos be used to compare different models, see the example here:  
+	If we plot the Recall on the x-axis, and the Precision on the y-axis while vary the threshold of the model, then we will have a Precision-Recall curve. It is a model-wide measure for evaluation binary classifiers. Of course, we want our model has high Recall and high Precision, that is, we want our model to move close to the right corner on the plot. It usually can also be used to compare different models, see the example here:  
 	
 	![image](https://classeval.files.wordpress.com/2015/06/two-precision-recall-curves.png?w=520&h=520 "compare model")  
 	Figure is from a nice blog post - [Introduction to the Precision-Recall plot](https://classeval.wordpress.com/introduction/introduction-to-the-precision-recall-plot/). 
 	
-	The ROC curve ([Receiver Operating Characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)) is a plot that illustrates the performance of a binary classifier when the threshold of the classifier is varied. It plots the False Positive Rate (100 - Specificity) on the x-axis, and True Positive Rate (Recall/Sensitivity) on the y-axis. We know how to calculate Recall from above, but for the False Positive Rate, which  tries to answer 'Within all the real spider mans, how many of the model estiamted as iron man?', is calculated as: 
+	The ROC curve ([Receiver Operating Characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)) is a plot that illustrates the performance of a binary classifier when the threshold of the classifier is varied. It plots the False Positive Rate (100 - Specificity) on the x-axis, and True Positive Rate (Recall/Sensitivity) on the y-axis. We know how to calculate Recall from above, but for the False Positive Rate, which  tries to answer 'Within all the real spider mans, how many of the model estimated as iron man?', is calculated as: 
 		
 	```
 	False Positive Rate = FP / (FP + TN) = 60 / (60 + 40) = 0.6     
@@ -64,7 +64,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	
 	![image](https://upload.wikimedia.org/wikipedia/commons/3/36/ROC_space-2.png "ROC curve")
 	
-	We can see the Precision-Recall curve and the ROC curve are closely related with each other, but the key differences between them are lie on what your problem need. If your problem have an inbalanced dataset, that is you have a few of positive samples but a lot of negative samples (100 iron man, and 100000 spide man), and you are more care of finding the iron man out, then you should use Precision-Recall curve. Otherwise, you can use ROC curve. See a nice discussion on Quora [here](https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each).   
+	We can see the Precision-Recall curve and the ROC curve are closely related with each other, but the key differences between them are lie on what your problem need. If your problem have an inbalanced dataset, that is you have a few of positive samples but a lot of negative samples (100 iron man, and 100000 spider man), and you are more care of finding the iron man out, then you should use Precision-Recall curve. Otherwise, you can use ROC curve. See a nice discussion on Quora [here](https://www.quora.com/What-is-the-difference-between-a-ROC-curve-and-a-precision-recall-curve-When-should-I-use-each).   
 		
 	For more details, there is a very nice paper [The Relationship Between Precision-Recall and ROC Curves](http://pages.cs.wisc.edu/~jdavis/davisgoadrichcamera2.pdf).   
 	  
@@ -78,24 +78,24 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	No. 
 
 8. **What is statistical power?**   
-	Statistical power is the likelihood that a study will detect an effect when there is an effect there to be detected [refered from here](https://effectsizefaq.com/2010/05/31/what-is-statistical-power/). It depends mainly on the effect size, the sample size. [Here](https://effectsizefaq.com/2010/05/31/what-is-statistical-power/) is a very nice analogy to understand more of the statistical power.  
+	Statistical power is the likelihood that a study will detect an effect when there is an effect there to be detected [referred from here](https://effectsizefaq.com/2010/05/31/what-is-statistical-power/). It depends mainly on the effect size, the sample size. [Here](https://effectsizefaq.com/2010/05/31/what-is-statistical-power/) is a very nice analogy to understand more of the statistical power.  
 
 9. **Explain what resampling methods are and why they are useful. Also explain their limitations.**   
 	Resampling methods differs from the classical parametric tests that compare observed statistics to theoretical sampling distributions, it is based on repeated sampling within the same sample to draw the inference. The resampling methods are simpler and more accurate, require fewer assumptions, and have greater generalizability. 
 	
 	Resampling can be used for different purposes, and the most common ones are:  
-	* To validate models - methods like bootstrap, cross-validation. For example, we usually can use 10-Fold cross-validation to validate our model on limited dataset, or to choose a desire parameters. 
-	* Estimating the precision/uncertainty of sample statistics (medians, variance, etc), like jackknife, bootstrap. For example, in order to get a confidence interval of certain parameters we interested, we can use bootstrap to achieve that.     
-	* To test hypotheses of 'no effect', like Permutation which excahnges labels on data points to test statistic under the null hypothesis in order to perform a statistical significance test.   
+	* To validate models - methods like [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)), [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)). For example, we usually can use 10-Fold cross-validation to validate our model on limited dataset, or to choose a desire parameters. 
+	* Estimating the precision/uncertainty of sample statistics (medians, variance, etc), like [jackknife](https://en.wikipedia.org/wiki/Jackknife_resampling), bootstrap. For example, in order to get a confidence interval of certain parameters we interested, we can use bootstrap to achieve that.     
+	* To test hypotheses of 'no effect', like [Permutation test](http://thomasleeper.com/Rcourse/Tutorials/permutationtests.html) which excahnges labels on data points to test statistic under the null hypothesis in order to perform a statistical significance test.   
 	* To approximate the numerical results, like [Monte Carlo](https://en.wikipedia.org/wiki/Monte_Carlo_method), which rely on repeated random sampling from the known characteristics. Like in the [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) used in Bayesian statistics, which we can get the posterior distribution by sampling that is impossible to get a analytics solution.  
 	
-	Jake VanderPlas gave a nice talk on PyCon 2016, which briefly touched some parts of the resampling method, you can find the video of the talk [here](https://youtu.be/Iq9DzN6mvYA?t=12m40s), and the slides [here](https://speakerdeck.com/jakevdp/statistics-for-hackers). For further readings:
-	[A gentle introduciton to Resampling techniques](http://wise.cgu.edu/wp-content/uploads/2015/04/Introduction-to-Resampling-Techniques-110901.pdf).  
+	Jake VanderPlas gave a nice talk on PyCon 2016, which briefly touched some parts of the resampling method, you can find the video of the talk [here](https://youtu.be/Iq9DzN6mvYA?t=12m40s), and the slides [here](https://speakerdeck.com/jakevdp/statistics-for-hackers). For further readings:   
+	[A gentle introduction to Resampling techniques](http://wise.cgu.edu/wp-content/uploads/2015/04/Introduction-to-Resampling-Techniques-110901.pdf).  
 	[Resampling Statistics](http://userwww.sfsu.edu/efc/classes/biol710/boots/rs-boots.htm).  
 	[Resampling methods: Concepts, Applications, and Justification](http://pareonline.net/getvn.asp?v=8&n=19).  
 
 10. **Is it better to have too many false positives, or too many false negatives? Explain.**    
-
+	This depends on your need. 
    
 11. **What is selection bias, why is it important and how can you avoid it?**     
 
