@@ -162,7 +162,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	
 	Here are the ones I use most:  
 	* **[matplotlib](http://matplotlib.org/gallery.html)**, most powerful and flexible package that can plot nice figures. A lot of the figures I generated for the papers are from it.    
-	* **[pandas]()**, is not only an analysis tool, but the plotting capbility is also really great. 
+	* **[pandas](http://pandas.pydata.org/)**, is not only an analysis tool, but the plotting capbility is also really great. 
 	* **[Seaborn](https://stanford.edu/~mwaskom/software/seaborn/examples/)**, I use it mostly for the quick nice plot style. Since the new matplotlib added the different styles, I guess I will use it less. 
 	* **[Bokeh](http://bokeh.pydata.org/en/latest/)**, a very nice interactive plot package. I usually use it to generate the html interactive file for easily passing around.  
 	* **[Basemap](http://matplotlib.org/basemap/users/examples.html)**, this is what I usually use for plotting maps.  
@@ -180,8 +180,10 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	I never used Tableau, R, SAS before, so I cannot say anything about them.  
 	
 	For plotting high dimensional data, [parallel coordinates](https://en.wikipedia.org/wiki/Parallel_coordinates) is a popular option. 
-	![image](https://upload.wikimedia.org/wikipedia/en/4/4a/ParCorFisherIris.png "parallel coordinates"). Or the [radar chart](https://en.wikipedia.org/wiki/Radar_chart) is another option. 
+	![image](https://upload.wikimedia.org/wikipedia/en/4/4a/ParCorFisherIris.png "parallel coordinates").   
 	
-	Instead of plotting them directly, I usually first see if I can explain most of the data in a lower dimension, say 2 or 3 dimension by using [Principle Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis). 
+	Or the [radar chart](https://en.wikipedia.org/wiki/Radar_chart) is another option. Pandas can be used to plot the [parallel coordinates](http://pandas.pydata.org/pandas-docs/version/0.9.1/visualization.html#parallel-coordinates).  
+	
+	Instead of plotting them directly, I usually first see if I can explain most of the data in lower dimensions, say 2 or 3 dimension by using [Principle Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis). 
 	
 	There is a very nice discussion on Quora - ['What is the best way to visualize high-dimensional data'](https://www.quora.com/Whats-the-best-way-to-visualize-high-dimensional-data)
