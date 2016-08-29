@@ -146,7 +146,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 16. **How would you screen for outliers and what should you do if you find one?**  
-
+	
 
 17. **How would you use either the extreme value theory, Monte Carlo simulations or mathematical statistics (or anything else) to correctly estimate the chance of a very rare event?**  
 
@@ -155,6 +155,33 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 19. **Explain what a false positive and a false negative are. Why is it important to differentiate these from each other?**  
+	This question seems duplicate with question 4 and 10, so I will skip this one.  
 
+20. **Which tools do you use for visualization? What do you think of Tableau? R? SAS? (for graphs). How to efficiently represent 5 dimension in a chart (or in a video)?**   
+	Since I am mostly using python in my daily life and research, so all the visualization tools are in python. 
+	
+	Here are the ones I use most:  
+	* **[matplotlib](http://matplotlib.org/gallery.html)**, most powerful and flexible package that can plot nice figures. A lot of the figures I generated for the papers are from it.    
+	* **[pandas]()**, is not only an analysis tool, but the plotting capbility is also really great. 
+	* **[Seaborn](https://stanford.edu/~mwaskom/software/seaborn/examples/)**, I use it mostly for the quick nice plot style. Since the new matplotlib added the different styles, I guess I will use it less. 
+	* **[Bokeh](http://bokeh.pydata.org/en/latest/)**, a very nice interactive plot package. I usually use it to generate the html interactive file for easily passing around.  
+	* **[Basemap](http://matplotlib.org/basemap/users/examples.html)**, this is what I usually use for plotting maps.  
+	* **[cartopy](http://scitools.org.uk/cartopy/docs/latest/gallery.html)**, a nice package for quick map plotting.   
+	* **[folium](https://github.com/python-visualization/folium)**, my favorite interactive map plotting package built on top of [leaflet](http://leafletjs.com/).  
 
-20. **Which tools do you use for visualization? What do you think of Tableau? R? SAS? (for graphs). How to efficiently represent 5 dimension in a chart (or in a video)?**
+	Here are some more nice package, I occassionally use.  
+	* **[geoplotlib](https://github.com/andrea-cuttone/geoplotlib)**, a toolbox for visualizaing geographical data and making maps.  
+	* **[mpld3](http://mpld3.github.io/)**, another interactive plotting package that built on top of D3.  
+	* **[pygal](http://pygal.org/en/stable/index.html)**, another interactive plotting package. It can output figures as SVGs.   
+	* **[ggplot](http://ggplot.yhathq.com/)**, plot based on R's ggplot2.    
+	* **[datashader](https://github.com/bokeh/datashader)**, can create meaningful representations of large amounts of data.  
+	* **[missingno](https://github.com/ResidentMario/missingno)**, a package to deal with missing or messy data.  
+	
+	I never used Tableau, R, SAS before, so I cannot say anything about them.  
+	
+	For plotting high dimensional data, [parallel coordinates](https://en.wikipedia.org/wiki/Parallel_coordinates) is a popular option. 
+	![image](https://upload.wikimedia.org/wikipedia/en/4/4a/ParCorFisherIris.png "parallel coordinates"). Or the [radar chart](https://en.wikipedia.org/wiki/Radar_chart) is another option. 
+	
+	Instead of plotting them directly, I usually first see if I can explain most of the data in a lower dimension, say 2 or 3 dimension by using [Principle Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis). 
+	
+	There is a very nice discussion on Quora - ['What is the best way to visualize high-dimensional data'](https://www.quora.com/Whats-the-best-way-to-visualize-high-dimensional-data)
