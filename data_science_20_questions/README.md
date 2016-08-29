@@ -115,7 +115,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 13. **What is the difference between "long" and "wide" format data?**  
-	It is easier to see in an example:   
+	The long and wide format data are used to describe two different presentations for tabular data. In the long format, it is kind of like the key-value pairs to store the data, each subject (Iron man or Spider man) will have data in multiple rows. The wide format data, each subject will have all the variables in the same row but separated in different columns. It is easier to see in an example:   
 	
 	**long format** 
 	
@@ -137,6 +137,8 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	| Iron man   |  red  |   iron   |nuclear|  5'8"  | 
 	| Spider man |  red  |   cloth  | food  |  5'10" | 
 
+	The wide format data usually will have problems when you want to visualize it with many variables. But it is very easy to convert between these two types data using python or R.     
+	
 14. **What method do you use to determine whether the statistics published in an article (e.g. newspaper) are either wrong or presented to support the author's point of view, rather than correct, comprehensive factual information on a specific subject?**  
 
 
