@@ -120,7 +120,10 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	Selection bias can cause the researcher to reach wrong conclusion. I think the best way to avoid the selection bias is first to get to know the common bias and how it affects research. [Here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917255/) is a nice review of bias on evidence-based medicine. Though slightly different, a lot of the topics/concepts can be applied to other fields. as well.    
 
 12. **Give an example of how you would use experimental design to answer a question about user behavior.**   
-
+	I don't know how to answer this question, but will try based on my knowledge. To design an experiment to learn user behavior, I think it depends on the problem in hand. We need first understand the goal of the problem, i.e., what behavior we want to understand? And then find the factors that will affect the behavior.    
+	
+	For example, we build a smartphone application, and have lots of people download our applications. We want to 
+	
 
 13. **What is the difference between "long" and "wide" format data?**  
 	The long and wide format data are used to describe two different presentations for tabular data. In the long format, it is kind of like the key-value pairs to store the data, each subject (Iron man or Spider man) will have data in multiple rows. The wide format data, each subject will have all the variables in the same row but separated in different columns. It is easier to see in an example:   
@@ -151,7 +154,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 15. **Explain Edward Tufte's concept of "chart junk."**  
-	If you don't know [Edward Tufte](https://en.wikipedia.org/wiki/Edward_Tufte), then you should really get to know him and his famous books (see his [webpage](https://www.edwardtufte.com/tufte/index)). I own 4 of his books - [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi), [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei), [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex), and [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be). His most classic book is '[The Visual Display of Quantitative Information](https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?ie=UTF8&qid=1472967037&sr=8-1&keywords=The+Visual+Display+of+Quantitative+Information)', which will make your data visualization goes up to a new level. This "chart junk" is from this book:
+	If you don't know [Edward Tufte](https://en.wikipedia.org/wiki/Edward_Tufte), then you should really get to know him and his famous books (see his [webpage](https://www.edwardtufte.com/tufte/index)). I own 4 of his books - [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi), [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei), [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex), and [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be). All of these books are great. His most classic book is '[The Visual Display of Quantitative Information](https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?ie=UTF8&qid=1472967037&sr=8-1&keywords=The+Visual+Display+of+Quantitative+Information)', which will make your data visualization goes up to a new level. This "chart junk" is from this book:
 	> The interior decoration of graphics generates a lot of ink that does not tell the viewer anything new. The purpose of decoration varies — to make the graphic appear more scientific and precise, to enliven the display, to give the designer an opportunity to exercise artistic skills. Regardless of its cause, it is all non-data-ink or redundant data-ink, and it is often chartjunk.  
 	
 	What he means is the elements in the charts are unnecessary to convey the main information, or distract the viewer. See the following example from [WiKi](https://en.wikipedia.org/wiki/Chartjunk):  
@@ -164,8 +167,22 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 18. **What is a recommendation engine? How does it work?**  
-	A recommendation engine is a system that can predict a user's "rating" or "preference" based on the user's activities or other users' activities. One easy example is Amazon, when you browse the books, you always see 'Recommend books for you', and 'Other people may like this'. This is Amazon recommendatoin engine based on your browse history and other people's browse history.  
-
+	A recommendation engine is a system that can predict a user's "rating" or "preference" based on the user's activities or other users' activities. One easy example is Amazon, when you browse the books, you always see 'Recommend books for you', and 'Other people may like this'. This is Amazon recommendatoin engine based on your browse history and other people's browse history.   
+	
+	There are two common approaches: [Collaborative filtering](https://en.wikipedia.org/wiki/Collaborative_filtering) and [Content-based filtering](http://recommender-systems.org/content-based-filtering/). 
+	
+	**Collaborative filtering**  
+	This approach is based on collecting and analyzing a large amount of information on users' behaviors, activities or preferences and predicting what users will like based on their similarity to other users (from WiKi). So the assumption here is that similar people tend to have similar behavior, if we know their past behaviors, we can predict their future behavior. For example, I love machine learning, always browse interesting machine learning books online. Another person also loves machine learning, and he has another set of books he usually browse. So if the system recommend a book I love from me about machine learning to this person, there's a high chance this person will love it as well. 
+	
+	Therefore, in order to use this approach, the first thing we should do is to collect a lot of data from different users, and use them as the basis to predict future user behavior. The advantage of this method is that, we even don't need know the content of the product, all we need is collecting large dataset about users' activities. On the other hand, this is also the disadvantage of this approach, since we have to first collect a large dataset to make this approach work. Therefore, when you start a new business, you may need wait for a few years to start to recommend product to your users.  
+	
+	**Collaborative filtering** 
+	In contrast, the collaborative filtering approach is based on understanding of your products and the profile of your user, i.e., information about what this user likes. Then the algorithm will recommend products that are similar to those that a user liked in the past. For example, I love Iron man movies, I watched Iron man I, II, III in the past. Therefore, if the algorithm recommends me a movie 'I, Robot', there's a high chance I will love it (of course, both are my favorite). But if the algorithm recommends me a love movie, I would say, there's still room to train the algorithm to be better. 
+	
+	Collaborative filtering approach doesn't need collect large dataset as the first step. Instead, you can start to recommend product to your users from the very beginning after he starts to choose your product. But you can see that, you now have to learn the characteristics about your product, this is the trade!
+	
+	**Hybrid model** 
+	Hybrid is always the best ^)^ We can also combine the two methods together, this is the Hybrid recommend system: by making content-based and collaborative-based predictions separately and then combining them; by adding content-based capabilities to a collaborative-based approach (and vice versa); or by unifying the approaches into one model. 
 
 19. **Explain what a false positive and a false negative are. Why is it important to differentiate these from each other?**  
 	This question seems duplicate with question 4 and 10, so I will skip this one.  
