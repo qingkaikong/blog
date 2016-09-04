@@ -151,7 +151,11 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 15. **Explain Edward Tufte's concept of "chart junk."**  
-
+	If you don't know [Edward Tufte](https://en.wikipedia.org/wiki/Edward_Tufte), then you should really get to know him and his famous books (see his [webpage](https://www.edwardtufte.com/tufte/index)). I own 4 of his books - [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi), [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei), [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex), and [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be). His most classic book is '[The Visual Display of Quantitative Information](https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?ie=UTF8&qid=1472967037&sr=8-1&keywords=The+Visual+Display+of+Quantitative+Information)', which will make your data visualization goes up to a new level. This "chart junk" is from this book:
+	> The interior decoration of graphics generates a lot of ink that does not tell the viewer anything new. The purpose of decoration varies — to make the graphic appear more scientific and precise, to enliven the display, to give the designer an opportunity to exercise artistic skills. Regardless of its cause, it is all non-data-ink or redundant data-ink, and it is often chartjunk.  
+	
+	What he means is the elements in the charts are unnecessary to convey the main information, or distract the viewer. See the following example from [WiKi](https://en.wikipedia.org/wiki/Chartjunk):  
+	![image](https://upload.wikimedia.org/wikipedia/commons/c/c9/Chartjunk-example.svg "chart junk")
 
 16. **How would you screen for outliers and what should you do if you find one?**  
 	
@@ -160,6 +164,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 
 
 18. **What is a recommendation engine? How does it work?**  
+	A recommendation engine is a system that can predict a user's "rating" or "preference" based on the user's activities or other users' activities. One easy example is Amazon, when you browse the books, you always see 'Recommend books for you', and 'Other people may like this'. This is Amazon recommendatoin engine based on your browse history and other people's browse history.  
 
 
 19. **Explain what a false positive and a false negative are. Why is it important to differentiate these from each other?**  
