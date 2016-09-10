@@ -161,7 +161,12 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	![image](https://upload.wikimedia.org/wikipedia/commons/c/c9/Chartjunk-example.svg "chart junk")
 
 16. **How would you screen for outliers and what should you do if you find one?**  
+	An outlier is an observation that is distant from the other observations. It may from two cases, (1) measurement error or (2) heavy tailed distribution. In the first case, we want to discard the outlier, but in the later case, it is part of the information that need special attention to. 
 	
+	The way I usually to find an outlier is using the [box plot](https://en.wikipedia.org/wiki/Box_plot), and if the data point is outside of the 1.5*IQR, I will treat it as an outlier. See more details [here](http://www.whatissixsigma.net/box-plot-diagram-to-identify-outliers/).   
+	![image](http://www.whatissixsigma.net/wp-content/uploads/2015/07/Box-Plot-Diagram-to-identify-Outliers-figure-1.png "outlier")  
+	
+	There are more discussions whether to drop the outliers [here](https://www.researchgate.net/post/When_is_it_justifiable_to_exclude_outlier_data_points_from_statistical_analyses).   
 
 17. **How would you use either the extreme value theory, Monte Carlo simulations or mathematical statistics (or anything else) to correctly estimate the chance of a very rare event?**  
 
