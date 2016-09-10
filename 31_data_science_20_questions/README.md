@@ -120,7 +120,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	Selection bias can cause the researcher to reach wrong conclusion. I think the best way to avoid the selection bias is first to get to know the common bias and how it affects research. [Here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917255/) is a nice review of bias on evidence-based medicine. Though slightly different, a lot of the topics/concepts can be applied to other fields. as well.    
 
 12. **Give an example of how you would use experimental design to answer a question about user behavior.**   
-	I don't know how to answer this question, but will try based on my knowledge. To design an experiment to learn user behavior, I think it depends on the problem in hand. We need first understand the goal of the problem, i.e., what behavior we want to understand? And then find the factors that will affect the behavior. We then need braistorm how to test these factors using experimental method.     
+	I don't know how to answer this question, but will try based on my knowledge. To design an experiment to learn user behavior, I think it depends on the problem in hand. We need first understand the goal of the problem, i.e., what behavior we want to understand? And then find the factors that will affect the behavior. We then need brainstorm how to test these factors using experimental method.     
 
 13. **What is the difference between "long" and "wide" format data?**  
 	The long and wide format data are used to describe two different presentations for tabular data. In the long format, it is kind of like the key-value pairs to store the data, each subject (Iron man or Spider man) will have data in multiple rows. The wide format data, each subject will have all the variables in the same row but separated in different columns. It is easier to see in an example:   
@@ -150,7 +150,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 14. **What method do you use to determine whether the statistics published in an article (e.g. newspaper) are either wrong or presented to support the author's point of view, rather than correct, comprehensive factual information on a specific subject?**  
 	I think all the statistics used in newspaper or TV is to support the author's point. This is illustrated in the book [How to lie with Statistics](https://en.wikipedia.org/wiki/How_to_Lie_with_Statistics). 
 	
-	It is difficult to tell whether the statistics is wrong, since we need reproduce the results if we are facing the quesiton and want to solve it by ourselves. But many times, we can not re-do the work, so I don't have a better way to determine if the statistics are wrong. 
+	It is difficult to tell whether the statistics is wrong, since we need reproduce the results if we are facing the question and want to solve it by ourselves. But many times, we can not re-do the work, so I don't have a better way to determine if the statistics are wrong. 
 
 15. **Explain Edward Tufte's concept of "chart junk."**  
 	If you don't know [Edward Tufte](https://en.wikipedia.org/wiki/Edward_Tufte), then you should really get to know him and his famous books (see his [webpage](https://www.edwardtufte.com/tufte/index)). I own 4 of his books - [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi), [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei), [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex), and [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be). All of these books are great. His most classic book is '[The Visual Display of Quantitative Information](https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?ie=UTF8&qid=1472967037&sr=8-1&keywords=The+Visual+Display+of+Quantitative+Information)', which will make your data visualization goes up to a new level. This "chart junk" is from this book:
@@ -170,12 +170,12 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 17. **How would you use either the extreme value theory, Monte Carlo simulations or mathematical statistics (or anything else) to correctly estimate the chance of a very rare event?**  
 	I don't know the extreme value theory, so will talk using the Monte Carlo simulations to estimate the chance of a very rare event. 
 	
-	A very rare event is an event occuring with a very small probability. So if you use Monte Carlo directly, it will be really inefficient for sampling the rare events. For example, if the instance occur at the probability 10^(-9), then on average, we need a sample of size n = 10^(9) to observe just a single occurence of the event, and much more if we expect a reliable estimation of the mean and variance to obtain a sufficiently narrow confidence interval.  
+	A very rare event is an event occurring with a very small probability. So if you use Monte Carlo directly, it will be really inefficient for sampling the rare events. For example, if the instance occur at the probability 10^(-9), then on average, we need a sample of size n = 10^(9) to observe just a single occurrence of the event, and much more if we expect a reliable estimation of the mean and variance to obtain a sufficiently narrow confidence interval.  
 	
 	Importance sampling (IS) is a powerful tool to reduce the variance of an estimator, that is increasing the occurrence of the rare event. The basic idea of importance sampling is to change the probability laws of the system under study to sample more frequently the events that are more important for the simulation. Of course, using this new distribution results in a biased estimator if no correction is applied. Therefore the simulation output needs to be translated in terms of the original measure, which is done by multiply a so-called likelihood ratio. See the details in [chapter 2](https://books.google.com/books?id=KoRdR-pSfKsC&pg=PA17&lpg=PA17&dq=Monte+Carlo+simulations+rare+events&source=bl&ots=YejQqI4QM_&sig=ANSPsfU9NRF78VH4pY3iO6yApbM&hl=en&sa=X&ved=0ahUKEwid0527gYTPAhVL4mMKHYRUB1Y4FBDoAQgyMAQ#v=onepage&q=Monte%20Carlo%20simulations%20rare%20events&f=false) of [Rare Event Simulation using Monte Carlo Methods](http://onlinelibrary.wiley.com/book/10.1002/9780470745403) by Gerardo Rubino and Bruno Tuffin.  
 
 18. **What is a recommendation engine? How does it work?**  
-	A recommendation engine is a system that can predict a user's "rating" or "preference" based on the user's activities or other users' activities. One easy example is Amazon, when you browse the books, you always see 'Recommend books for you', and 'Other people may like this'. This is Amazon recommendatoin engine based on your browse history and other people's browse history.   
+	A recommendation engine is a system that can predict a user's "rating" or "preference" based on the user's activities or other users' activities. One easy example is Amazon, when you browse the books, you always see 'Recommend books for you', and 'Other people may like this'. This is Amazon recommendation engine based on your browse history and other people's browse history.   
 	
 	There are two common approaches: [Collaborative filtering](https://en.wikipedia.org/wiki/Collaborative_filtering) and [Content-based filtering](http://recommender-systems.org/content-based-filtering/). 
 	
@@ -200,15 +200,15 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	
 	Here are the ones I use most:  
 	* **[matplotlib](http://matplotlib.org/gallery.html)**, most powerful and flexible package that can plot nice figures. A lot of the figures I generated for the papers are from it.    
-	* **[pandas](http://pandas.pydata.org/)**, is not only an analysis tool, but the plotting capbility is also really great. 
+	* **[pandas](http://pandas.pydata.org/)**, is not only an analysis tool, but the plotting capability is also really great. 
 	* **[Seaborn](https://stanford.edu/~mwaskom/software/seaborn/examples/)**, I use it mostly for the quick nice plot style. Since the new matplotlib added the different styles, I guess I will use it less. 
 	* **[Bokeh](http://bokeh.pydata.org/en/latest/)**, a very nice interactive plot package. I usually use it to generate the html interactive file for easily passing around.  
 	* **[Basemap](http://matplotlib.org/basemap/users/examples.html)**, this is what I usually use for plotting maps.  
 	* **[cartopy](http://scitools.org.uk/cartopy/docs/latest/gallery.html)**, a nice package for quick map plotting.   
 	* **[folium](https://github.com/python-visualization/folium)**, my favorite interactive map plotting package built on top of [leaflet](http://leafletjs.com/).  
 
-	Here are some more nice package, I occassionally use.  
-	* **[geoplotlib](https://github.com/andrea-cuttone/geoplotlib)**, a toolbox for visualizaing geographical data and making maps.  
+	Here are some more nice package, I occasionally use.  
+	* **[geoplotlib](https://github.com/andrea-cuttone/geoplotlib)**, a toolbox for visualizing geographical data and making maps.  
 	* **[mpld3](http://mpld3.github.io/)**, another interactive plotting package that built on top of D3.  
 	* **[pygal](http://pygal.org/en/stable/index.html)**, another interactive plotting package. It can output figures as SVGs.   
 	* **[ggplot](http://ggplot.yhathq.com/)**, plot based on R's ggplot2.    
