@@ -169,7 +169,11 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	There are more discussions whether to drop the outliers [here](https://www.researchgate.net/post/When_is_it_justifiable_to_exclude_outlier_data_points_from_statistical_analyses).   
 
 17. **How would you use either the extreme value theory, Monte Carlo simulations or mathematical statistics (or anything else) to correctly estimate the chance of a very rare event?**  
-
+	I don't know the extreme value theory, so will talk using the Monte Carlo simulations to estimate the chance of a very rare event. 
+	
+	A very rare event is an event occuring with a very small probability. So if you use Monte Carlo directly, it will be really inefficient for sampling the rare events. For example, if the instance occur at the probability 10^(-9), then on average, we need a sample of size n = 10^(9) to observe just a single occurence of the event, and much more if we expect a reliable estimation of the mean and variance to obtain a sufficiently narrow confidence interval.  
+	
+	Importance sampling (IS) is a powerful tool to reduce the variance of an estimator, that is increasing the occurrence of the rare event. The basic idea of importance sampling is to change the probability laws of the system under study to sample more frequently the events that are more important for the simulation. Of course, using this new distribution results in a biased estimator if no correction is applied. Therefore the simulation output needs to be translated in terms of the original measure, which is done by multiply a so-called likelihood ratio. See the details in [chapter 2](https://books.google.com/books?id=KoRdR-pSfKsC&pg=PA17&lpg=PA17&dq=Monte+Carlo+simulations+rare+events&source=bl&ots=YejQqI4QM_&sig=ANSPsfU9NRF78VH4pY3iO6yApbM&hl=en&sa=X&ved=0ahUKEwid0527gYTPAhVL4mMKHYRUB1Y4FBDoAQgyMAQ#v=onepage&q=Monte%20Carlo%20simulations%20rare%20events&f=false) of [Rare Event Simulation using Monte Carlo Methods](http://onlinelibrary.wiley.com/book/10.1002/9780470745403) by Gerardo Rubino and Bruno Tuffin.  
 
 18. **What is a recommendation engine? How does it work?**  
 	A recommendation engine is a system that can predict a user's "rating" or "preference" based on the user's activities or other users' activities. One easy example is Amazon, when you browse the books, you always see 'Recommend books for you', and 'Other people may like this'. This is Amazon recommendatoin engine based on your browse history and other people's browse history.   
