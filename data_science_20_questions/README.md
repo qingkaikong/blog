@@ -151,7 +151,9 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	The wide format data usually will have problems when you want to visualize it with many variables. But it is very easy to convert between these two types data using python or R.     
 	
 14. **What method do you use to determine whether the statistics published in an article (e.g. newspaper) are either wrong or presented to support the author's point of view, rather than correct, comprehensive factual information on a specific subject?**  
-
+	I think all the statistics used in newspaper or TV is to support the author's point. This is illustrated in the book [How to lie with Statistics](https://en.wikipedia.org/wiki/How_to_Lie_with_Statistics). 
+	
+	It is difficult to tell whether the statistics is wrong, since we need reproduce the results if we are facing the quesiton and want to solve it by ourselves. But many times, we can not re-do the work, so I don't have a better way to determine if the statistics are wrong. 
 
 15. **Explain Edward Tufte's concept of "chart junk."**  
 	If you don't know [Edward Tufte](https://en.wikipedia.org/wiki/Edward_Tufte), then you should really get to know him and his famous books (see his [webpage](https://www.edwardtufte.com/tufte/index)). I own 4 of his books - [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi), [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei), [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/tufte/books_visex), and [Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be). All of these books are great. His most classic book is '[The Visual Display of Quantitative Information](https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?ie=UTF8&qid=1472967037&sr=8-1&keywords=The+Visual+Display+of+Quantitative+Information)', which will make your data visualization goes up to a new level. This "chart junk" is from this book:
