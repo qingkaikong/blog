@@ -120,10 +120,7 @@ I recently saw the [20 Questions to Detect Fake Data Scientists](http://www.kdnu
 	Selection bias can cause the researcher to reach wrong conclusion. I think the best way to avoid the selection bias is first to get to know the common bias and how it affects research. [Here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2917255/) is a nice review of bias on evidence-based medicine. Though slightly different, a lot of the topics/concepts can be applied to other fields. as well.    
 
 12. **Give an example of how you would use experimental design to answer a question about user behavior.**   
-	I don't know how to answer this question, but will try based on my knowledge. To design an experiment to learn user behavior, I think it depends on the problem in hand. We need first understand the goal of the problem, i.e., what behavior we want to understand? And then find the factors that will affect the behavior.    
-	
-	For example, we build a smartphone application, and have lots of people download our applications. We want to 
-	
+	I don't know how to answer this question, but will try based on my knowledge. To design an experiment to learn user behavior, I think it depends on the problem in hand. We need first understand the goal of the problem, i.e., what behavior we want to understand? And then find the factors that will affect the behavior. We then need braistorm how to test these factors using experimental method.     
 
 13. **What is the difference between "long" and "wide" format data?**  
 	The long and wide format data are used to describe two different presentations for tabular data. In the long format, it is kind of like the key-value pairs to store the data, each subject (Iron man or Spider man) will have data in multiple rows. The wide format data, each subject will have all the variables in the same row but separated in different columns. It is easier to see in an example:   
