@@ -8,6 +8,9 @@ Let's start today with the following few questions.
 
 As the name suggests, ML is the methods that enable machines or computers to learn from data we give them and then take decisions/actions. The famous definition from [Tom Mitchell's](http://www.cs.cmu.edu/~tom/) book - '[Machine learning](http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html)' is more formal if you want it. 
 
+To add a simple example, if we give thousands of images with cats or dos on it, and let the computer to learn from the characteristics of cats or dogs. After learning (of course, it is the machine learning), we give some new images to the computer, and ask it to decide whether it is dog or cat. This is an example of what is machine learning. We will give more examples about different types of machine learning next week.
+![Figure 00](./figures/00_cat_or_dog.jpg "cat or dog")
+
 ### Real world ML examples  
 Think about some daily stuff we take for granted, you will find ML is everywhere: 
 
