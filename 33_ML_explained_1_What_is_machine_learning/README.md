@@ -26,7 +26,7 @@ Think about some daily stuff we take for granted, you will find ML is everywhere
 #### 5. Why my bank call me about fraud?
 ![Figure 5](./figures/05_credit_card_fraud.jpg "credit card fraud")
 
-#### 6. Why self-driving car can drive by themselvs?
+#### 6. Why self-driving car can drive by themselves?
 ![Figure 6](./figures/06_self_driving.jpg "self-driving car")
 
 #### 7. Why google search engine can return what I want to search?
