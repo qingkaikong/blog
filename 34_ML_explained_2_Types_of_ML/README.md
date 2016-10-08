@@ -68,3 +68,4 @@ You can see the example for the unsupervised learning above.
 
 **More Explain**: Density estimation is the construction of an estimate, based on observed data, of an unobservable underlying probability density function. See more on [WiKi](https://en.wikipedia.org/wiki/Density_estimation). 
 
+All the figures are from internet, I thank the authors for the figures! 
