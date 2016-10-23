@@ -106,7 +106,7 @@ reference:
 
 
 ```python
- def cross_correlation_using_fft(x, y):
+def cross_correlation_using_fft(x, y):
     f1 = fft(x)
     
     # flip the signal of y
