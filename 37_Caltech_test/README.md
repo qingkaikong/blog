@@ -25,12 +25,14 @@ We know that, building has its own natural frequency (it is one of the most impo
 
 Therefore, if we adjust the sinusoidal force with the frequency similar to the natural frequency of the building, the building will start to vibrate. But don't worry, the maximum of the shaking is about 1 mm on the top of the building, which means, a lot of people actually may not feel the movement of the building. 
 
+Of course, this shaker can also apply a twist on the building, just adjust the rotation of the two blocks, but this is beyond the simple explaination of this blog, see more information in the references. 
+
 ## The purpose of the test
 
 The purpose of the test is to identify the natural frequency of the building in different directions, therefore, you can keep a time history of the changes of it. It can be a health state indicator of the building, for example, if after an earthquake, there're some damages to the building, you will see a large change of the natural frequency. See the details in the references. 
 
 ## Acknowledgement  
-We thank Professor [Monica Kohler](http://kohler.caltech.edu/), Professor [Thomas Heaton](http://heaton.caltech.edu/), and [Lucy Yin](https://www.linkedin.com/in/lucy-yin-3ab08577) for the opportunity and help with the tests. Figures except the shaker are all from online resources, I thank the authors as well. 
+We thank Professor [Monica Kohler](http://kohler.caltech.edu/), Professor [Thomas Heaton](http://heaton.caltech.edu/), [Lucy Yin](https://www.linkedin.com/in/lucy-yin-3ab08577), and [Anthony Massari](http://www.massari.caltech.edu/) for the opportunity and help with the tests. Figures except the shaker are all from online resources, I thank the authors as well. 
 
 ## References
 [Results of Millikan Library forced vibration testing](https://www.researchgate.net/publication/28785015_Results_of_Millikan_Library_Forced_Vibration_Testing).  
