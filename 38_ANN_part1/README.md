@@ -46,4 +46,10 @@ Let's say we have many pictures of [president Obama](https://en.wikipedia.org/wi
 
 <img src="https://raw.githubusercontent.com/qingkaikong/blog/master/38_ANN_part1/figures/figure6_sheldon_and_obama.jpg" width="600"/> 
 
+<img src="https://raw.githubusercontent.com/qingkaikong/blog/master/38_ANN_part1/figures/figure7_ANN_example_1.jpg" width="600"/> 
 
+<img src="https://raw.githubusercontent.com/qingkaikong/blog/master/38_ANN_part1/figures/figure8_ANN_example_2.jpg" width="600"/> 
+
+<img src="https://raw.githubusercontent.com/qingkaikong/blog/master/38_ANN_part1/figures/figure9_ANN_example_3.jpg" width="600"/> 
+
+<img src="https://raw.githubusercontent.com/qingkaikong/blog/master/38_ANN_part1/figures/figure10_ANN_example_4.jpg" width="600"/> 
