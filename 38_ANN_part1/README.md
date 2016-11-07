@@ -1,7 +1,8 @@
 From this week, I will try to cover the basics of [Artificial Neural Network](https://en.wikipedia.org/wiki/Artificial_neural_network) in a simple and intuitive way. Let's start with a brief history of the artificial neural network. 
 
 ## Brief history of neural network  
-Since there are many good introductions already online, I will just list the following important periods, you can check out this nice blog for more - ['A Concise History of Neural Networks'](https://medium.com/@Jaconda/a-concise-history-of-neural-networks-2070655d3fec#.ekc89166m). The important period for neural networks are:  
+Since there are many good introductions already online, I will just list the following important periods, you can check out this nice blog for more - ['A Concise History of Neural Networks'](https://medium.com/@Jaconda/a-concise-history-of-neural-networks-2070655d3fec#.ekc89166m). The important period for neural networks are:   
+
 **1940s** - The beginning of Neural Networks (Electronic Brain)   
 **1950s and 1960s** - The first golden age of Neural Networks (Perceptron)   
 **1970s** - The winter of Neural Networks (XOR problem)  
@@ -65,7 +66,7 @@ After training the ANN with many data, the weights have already been updated to 
 
 <img src="https://raw.githubusercontent.com/qingkaikong/blog/master/38_ANN_part1/figures/figure10_ANN_example_4.jpg" width="600"/> 
 
-The example we show here just gives you a sense of how ANN works, and for more details, we will talk more in the future posts.  
+The example we show here just gives you a sense of how ANN works, and for more details, we will talk in the future posts.  
 
 
 ## Acknowledgements
