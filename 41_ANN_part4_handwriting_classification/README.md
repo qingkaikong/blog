@@ -48,7 +48,7 @@ for i in range(64):
 ```
 
 
-![png](ANN_example_handwriting_files/ANN_example_handwriting_5_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/41_ANN_part4_handwriting_classification/ANN_example_handwriting_files/ANN_example_handwriting_5_0.png)
 
 
 ## Train an ANN classifier  
@@ -163,7 +163,7 @@ plot_confusion_matrix(cm, classes=digits.target_names,
 ```
 
 
-![png](ANN_example_handwriting_files/ANN_example_handwriting_15_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/41_ANN_part4_handwriting_classification/ANN_example_handwriting_files/ANN_example_handwriting_15_0.png)
 
 
 The x axis is the predicted digit from the MLP model, and the y axis is the true digit. The diagonal represents the correct results, we can see most of the digits we can estimate correctly. If we look at the first row, the off-diagonal number represents how many digits we estimate wrong for the digit 0, if there is 1 at the 6th column, this means that we classify one 0 digit to 5.   
@@ -191,5 +191,5 @@ for i in range(64):
 ```
 
 
-![png](ANN_example_handwriting_files/ANN_example_handwriting_18_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/41_ANN_part4_handwriting_classification/ANN_example_handwriting_files/ANN_example_handwriting_18_0.png)
 
