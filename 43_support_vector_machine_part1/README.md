@@ -60,7 +60,13 @@ In simple word, a kernel is just a transformation of our input data that allows 
 
 Instead of finding a circular boundary, kernel will help us to transform the input data into a higher dimension, and let us actually to use a linear boundary to separate the two groups. It will not be a linear line, but a linear plane. Let's look at the following movie to get a better sense hwo it works:  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3liCbRZPrZA" frameborder="0" allowfullscreen></iframe>  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3liCbRZPrZA" frameborder="0" allowfullscreen></iframe>   
+
+I hope you have a good understanding of support vector machine now. And next week, let's try to use sklearn to classify some real problems.   
+
+### References  
+
+[Support vector machine lecture](https://www.youtube.com/watch?v=eHsErlPJWUU) from Caltech. It is a very nice lecture, where I first learned SVM from.   
+[Introduction to statistical learning](http://www-bcf.usc.edu/~gareth/ISL/getbook.html), a great free book that you can learn the basic machine learning. It has a chapter on SVM, which is really nice.  
 
 
-### References
