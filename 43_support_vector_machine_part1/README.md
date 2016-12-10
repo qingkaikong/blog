@@ -52,5 +52,15 @@ Now you can see where the name support vector machine comes from. Support vector
 
 ## Kernels   
 
-Support Vector Machine closely related with the kernels. Why do we need kernels, and what is kernels.     
-   
+Support Vector Machine closely related with the [kernels](https://en.wikipedia.org/wiki/Kernel_method). We often hear people talking about kernel tricks in the SVM. But why do we need kernels, and what is kernels? As the goal of this blog is just to give you an intuitive concept, we will not talking too much details.    
+
+In simple word, a kernel is just a transformation of our input data that allows the SVMs to process it more easily. For exampke, in the following case, we want to separate the blue and red circles. We can not just draw a linear line to separate them, but need a non-linear boundary, in this case, a circle boundary.    
+
+<img src="https://raw.githubusercontent.com/qingkaikong/blog/master/43_support_vector_machine_part1/figures/figure_8.jpg" width="400"/>   
+
+Instead of finding a circular boundary, kernel will help us to transform the input data into a higher dimension, and let us actually to use a linear boundary to separate the two groups. It will not be a linear line, but a linear plane. Let's look at the following movie to get a better sense hwo it works:  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3liCbRZPrZA" frameborder="0" allowfullscreen></iframe>  
+
+
+### References
