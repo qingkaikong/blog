@@ -1,5 +1,5 @@
 
-We talked about the basics of SVM in the [previous blog](http://qingkaikong.blogspot.com/2016/12/machine-learning-7-support-vector.html), and now let's use a example to show you how to use it easily with [sklearn](http://scikit-learn.org/stable/), and also, some of the important parameters of it.    
+We talked about the basics of SVM in the [previous blog](http://qingkaikong.blogspot.com/2016/12/machine-learning-7-support-vector.html), and now let's use an example to show you how to use it easily with [sklearn](http://scikit-learn.org/stable/), and also, some of the important parameters of it.    
 
 
 ```python
@@ -16,7 +16,7 @@ plt.style.use('seaborn-poster')
 
 ## Load and visualize data 
 
-Let's load the [IRIS](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris) from sklearn. This dataset is a very famous dataset for pattern recognition that from the famous [Fisher's paper](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x/abstract) in 1936. The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. The features are Sepal Length, Sepal Width, Petal Length and Petal Width. They are related with the physical propertises of the plant. Today we will use only 2 features for easy visualization purposes. 
+Let's load the [IRIS](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris) from sklearn. This dataset is a very famous dataset for pattern recognition that from the famous [Fisher's paper](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x/abstract) in 1936. The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. The features are Sepal Length, Sepal Width, Petal Length and Petal Width. They are related with the physical properties of the plant. Today we will use only 2 features for easy visualization purposes. 
 
 
 ```python
@@ -79,7 +79,7 @@ clf.fit(X,y)
 
 ## The training results
 
-Let's view the performance on the training data, we will plot the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix). Also, we will plot the decision boundary, which will help us understand more of the capability of the classifier (since we only have two selected features, this makes us eaiser to view the decision boundary). 
+Let's view the performance on the training data, we will plot the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix). Also, we will plot the decision boundary, which will help us understand more of the capability of the classifier (since we only have two selected features, this makes us easier to view the decision boundary). 
 
 
 ```python
@@ -248,7 +248,7 @@ plot_desicion_boundary(X, y, clf)
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/45_support_vector_machine_part2_sklearn/SVM_example_classification_files/SVM_example_classification_18_0.png)
 
 
-Haha, after we used the 'rbf' kernel, it seems the SVM can classify them much better. The 'rbf' kernel based SVM looks much flexible, but it also more prone to [overfit](https://en.wikipedia.org/wiki/Overfitting) the data. Therefore, to better use it, you need understand two important parameters: C and gamma, let's have a closer look of them.   
+Haha, after we used the 'rbf' kernel, it seems the SVM can classify them much better. The 'rbf' kernel based SVM looks much flexible, but it also more prone to [overfit](https://en.wikipedia.org/wiki/Overfitting) the data. Therefore, to better use it, you need understand two important parameters: C and gamma, let's have a closer look at them.   
 
 ## C and gamma in SVM
 
@@ -258,7 +258,7 @@ C controls the cost of misclassification on the training data, it trades off mis
 * Larger C, lower bias, higher variance. 
 * Smaller C, higher bias, lower variance. 
 
-The following 3 figures showing different values of C, that is, C = 1, C = 100, C = 10000. We can see the higher the value C, the more complicat the decision boundary is, which tries to fit every training data, even with some clearly anomaly data. 
+The following 3 figures showing different values of C, that is, C = 1, C = 100, C = 10000. We can see the higher the value C, the more complicated the decision boundary is, which tries to fit every training data, even with some clearly anomaly data. 
 
 
 ```python
@@ -321,7 +321,7 @@ plot_desicion_boundary(X, y, clf, title = 'gamma = 50, C = 1')
 
 ## More on the parameters
 
-Another very important parameter is the class_weight, which will address the inbalance class case. Let's see an extreme example: if we have 99 instances of class 0, but 1 instance of class 1, then even the algorithm classify everything to class 0, we will have 99% correct rate. This is always the case if we have an inbalanced dataset, there are many ways to deal with it, but the parameter 'class_weight' in SVM will deal with this case by setting different weights to different classes. Let's grab the example from [sklearn website](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) directly. We can see without specify the class_weight, the boundary is set where most of the blue dots on beneath the boundary. But after we specified the class_weight, the SVM now pays more attention to the minor class (class 1), and classify most of them correct.      
+Another very important parameter is the class\_weight, which will address the inbalance class case. Let's see an extreme example: if we have 99 instances of class 0, but 1 instance of class 1, then even the algorithm classify everything to class 0, we will have 99% correct rate. This is always the case if we have an inbalanced dataset, there are many ways to deal with it, but the parameter 'class\_weight' in SVM will deal with this case by setting different weights to different classes. Let's grab the example from [sklearn website](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) directly. We can see without specify the class\_weight, the boundary is set where most of the blue dots on beneath the boundary. But after we specified the class\_weight, the SVM now pays more attention to the minor class (class 1), and classify most of them correct.      
 
 
 ```python
