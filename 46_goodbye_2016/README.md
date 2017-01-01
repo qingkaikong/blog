@@ -16,7 +16,7 @@ The lovely 2016 will be soon replaced by new, unexplored 2017. Looking back, I d
 **74** - I read 74 interesting scientific papers and write summary for each of them (started writing summary only in June this year)  
 **101** - I bought a total of 101 printed books from Amazon (I am a book lover. My home is full of books that my wife constantly complains, I need buy fewer books next year)  
 **366** - I have 366 days this year (who didn't?)  
-**1103** - I have 1103 commits on my Github!   
+**1115** - I have 1115 commits on my Github!   
 
 The best of this year:   
 The best Chinese movie I watched - [Goodbye Mr. Loser](https://en.wikipedia.org/wiki/Goodbye_Mr._Loser)     
