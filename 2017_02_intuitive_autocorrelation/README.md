@@ -1,5 +1,5 @@
 
-As promised last week, this week, we will show a simple example how [autocorrelation](https://en.wikipedia.org/wiki/Autocorrelation) works. I tried to find online with a nice animation, but I can not find it. Therefore, this week, let's just create a simple movie of showing how autocorrelation works. 
+As promised last week, this week, we will show a simple example - how [autocorrelation](https://en.wikipedia.org/wiki/Autocorrelation) works. I tried to find a nice animation online, but I can not find it. Therefore, this week, let's just create a simple movie of showing how autocorrelation works. 
 
 
 ```python
