@@ -24,5 +24,8 @@ This week, I will just show some of my wife's paintings here. She loves painting
 ## Faceless self-portrait
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_8.jpg)
 
-## My family
+## self-portrait
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_9.jpg)
+
+## My family
+![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_10.jpg)
