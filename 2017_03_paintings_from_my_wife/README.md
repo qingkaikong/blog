@@ -1,4 +1,4 @@
-This week, I will just show some of my wife's paintings here. She loves painting and wants to become an architect. I hope she can be a happy architect in the future. I love these paintings!
+This week, I will just show some of my wife's paintings here. She loves painting and wants to become an architect. I hope she can be a happy architect in the future. I am so proud of my wife!  
 
 ## Earthquake on egg shell
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_1.jpg)
@@ -24,7 +24,7 @@ This week, I will just show some of my wife's paintings here. She loves painting
 ## Faceless self-portrait
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_8.jpg)
 
-## self-portrait
+## self-portrait (1 to 1 ratio)
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_9.jpg)
 
 ## My family
