@@ -1,8 +1,8 @@
-This week, I am attending a 2-day bootcamp of Entrepreneurship at Berkeley. In the future I want to stay in Academia, but turning some research projects into a company is an appealing idea to me. Just think about you can get funding from NSF, private fundations, industry companies, and you own company, how cool is that. Besides, I think researches driven by the needs of the customers will be a nice category to work on. Therefore, it is better to learn the basics now as a graduate student. 
+This week, I am attending a 2-day bootcamp of Entrepreneurship at Berkeley. In the future I want to stay in Academia, but turning some research projects into a company is an appealing idea to me. Just think about you can get funding from NSF, private foundations, industry companies, and you own company, how cool is that. Besides, I think researches driven by the needs of the customers will be a nice category to work on. Therefore, it is better to learn the basics now as a graduate student. 
 
 The following are the key takeaways I got from the first day bootcamp:   
 
-1. The most common way a company fail is ’there is no people care'  
+1. The most common way a company fails is ’there is no people care'  
 2. Listen to the customers, they know better what they need, and we know better how to make it   
 3. The best team is the team that we all trust each other.  
 4. If you want to have projects more applied, ask what do you need for clients before doing the research and create something for them.    
