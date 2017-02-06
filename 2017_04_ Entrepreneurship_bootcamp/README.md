@@ -1,7 +1,8 @@
 This week, I am attending a 2-day bootcamp of Entrepreneurship at Berkeley. In the future I want to stay in Academia, but turning some research projects into a company is an appealing idea to me. Just think about you can get funding from NSF, private foundations, industry companies, and you own company, how cool is that. Besides, I think researches driven by the needs of the customers will be a nice category to work on. Therefore, it is better to learn the basics now as a graduate student. 
 
-The following are the key takeaways I got from the first day bootcamp:   
+The following are the key takeaways I got from the bootcamp:   
 
+## First day  
 1. The most common way a company fails is ’there is no people care'  
 2. Listen to the customers, they know better what they need, and we know better how to make it   
 3. The best team is the team that we all trust each other.  
@@ -15,3 +16,19 @@ The following are the key takeaways I got from the first day bootcamp:
 11. When you try to start a business, you need pass 5 filters: unmet need, market size, differentiated positioning, scalable business model, why us & why now.   
 12. Value those who know different things than you, you have to learn to appreciate the new things.   
 13. Build the positive momentum for your echo system. 
+
+
+## Second day  
+1. Select team member, passion is very important. 
+2. "A" players attract "A" players, but "B" players attract "C" players.   
+3. Team with diversity is more important than uniformity.   
+4. People with major strengths tend to have major weaknesses as well, know which one you value most.   
+5. The role of a CEO is to providing strong magnetic force to attract people, and drive to focused direction.   
+6. 4 points of CEO: (1) lead people, (2) shape product, (3) sell the vision, (4) feed the enterprise.   
+7. Stages of raising money: seed -> angel investors -> Early stage VC -> Late stage VC -> PE or IPO.   
+8. The importance of building an effective P&L (profit and loss statement). It should be in the zone of reason, since the investors will find any issue with pattern recognition skills ^)^  
+9. Steps of product development: start with a product vision -> Define Minimum viable product (MVP) -> Create an MVP demo/prototype -> Alpha Test (deploy MVP at few friendly customers) -> Get customer feedback -> Productize & Test the MVP (SQA) -> Beta Test -> Get customer feedback -> Fix bugs & Final Product Test -> Production release
+10. How to build a Minimally Viable Product (MVP)   
+11. How to eat an elephant? (One bite a time)
+12. Agile vs waterfall   
+13. Luck is a prepared mind meets opportunity
