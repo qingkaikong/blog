@@ -32,3 +32,7 @@ The following are the key takeaways I got from the bootcamp:
 11. How to eat an elephant? (One bite a time)
 12. Agile vs waterfall   
 13. Luck is a prepared mind meets opportunity
+
+Over the two days, I learned a lot from the bootcamp. Especially the exmaples we discussed in the bootcamp. I think it is very informative and can be applied to many aspects of my life. I am planing to learn more from the books recommended by the instructor (the instructor is the author).   
+
+![jpg](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_04_Entrepreneurship_bootcamp/figures/figure_1.jpg) 
