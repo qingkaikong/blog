@@ -1,5 +1,5 @@
 
-I talked a series of Artificial Neural Network (ANN) tutorial last year for a workshop, where I showed the very basics. But there are more people asking me some details, which I will cover some of them this week. Hope this will be useful to you. 
+I talked a series of Artificial Neural Network (ANN) tutorial last year for a workshop ([here](http://qingkaikong.blogspot.com/2016/11/machine-learning-3-artificial-neural.html)), where I showed the very basics. But there are more people asking me some details, which I will cover some of them this week. Hope this will be useful to you. 
 
 ## How to select the parameters
 
