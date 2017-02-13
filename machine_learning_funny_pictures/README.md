@@ -39,6 +39,9 @@ The following are funny picutures related with machine learning or data science 
 ### Developers are born brave
 ![jpg](./figures/figure_15.jpg)
 
+### It never rains in the Bay Area
+![jpg](./figures/figure_16.jpg)
+
 ### The deep learning Saga
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E" frameborder="0" allowfullscreen></iframe>
 
