@@ -9,14 +9,14 @@ This is a very nice Q&A from different scientists. You will see different people
 (https://violentmetaphors.com/2013/12/13/how-to-become-good-at-peer-review-a-guide-for-young-scientists/)   
 Very nice article about how to review with more resources at the end:
 
-This is the one from AGU:
-http://publications.agu.org/files/2012/12/PeerReview_Guide.pdf
+[A Quick Guide to Writing
+a Solid Peer Review](http://publications.agu.org/files/2012/12/PeerReview_Guide.pdf)   
+This is the one from AGU. 
 
+[How to write a peer review for an academic journal: Six steps from start to finish](http://www.phd2published.com/2012/05/09/how-to-write-a-peer-review-for-an-academic-journal-six-steps-from-start-to-finish-by-tanya-golash-boza/)  
 A quick 6 steps review:
-http://www.phd2published.com/2012/05/09/how-to-write-a-peer-review-for-an-academic-journal-six-steps-from-start-to-finish-by-tanya-golash-boza/
 
-Peer-Review Techniques for Novices
-http://www.sciencemag.org/careers/2001/04/peer-review-techniques-novices
 
-How to peer review
-http://matt.might.net/articles/how-to-peer-review/ 
+[Peer-Review Techniques for Novices](http://www.sciencemag.org/careers/2001/04/peer-review-techniques-novices)
+
+[How to peer review](http://matt.might.net/articles/how-to-peer-review/)
