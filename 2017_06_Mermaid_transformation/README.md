@@ -1,6 +1,6 @@
-Today, my wife draws another painting which I think really cool - The mermaid transformation. The original source is from the live model drawing she made yesterday. From this model drawing, she developed the whole idea. 
+Today, my wife draws another painting which I think really cool - The mermaid transition. The original source is from the live model drawing she made yesterday. From this model drawing, she developed the whole idea. 
 
-## Mermaid transformation
+## Mermaid transition
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_12.jpg)
 
 **The artist - Fan's explanation.**   
