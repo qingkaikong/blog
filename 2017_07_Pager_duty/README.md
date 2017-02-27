@@ -73,3 +73,8 @@ As a seismological observatory, the Berkeley Seismological Laboratory has been i
 Our primary responsibilty is for local earthquakes. This has led to the development of the REDI project and the joint notification system with the USGS Menlo Park. Since much of this processing is automated, the Alarm Response workload has been significantly lightened. However, it is extremely important that the UCB alarm response people carefully review - and update, if necesssary - information for larger events. This reviewing process must be done in collaboration with the USGS person on duty.
 
 We also have a responsibility to respond to regional and teleseismic events. In this situation, our duties are to provide supporting information for the "authoritative" agency - for example, Caltech, the University of Washington, or NEIC. In general, we do not formally release our locations and magnitudes to the press if we have a solution from the authoritative group.
+
+## Conclusion
+
+This blog is written because this maybe my last duty since I will graduate soon and will be off duty. I even feel a little sad, the pager duty experience is somewhat fun while frustration, and already been part of my life. I hope future students will enjoy the experience, and when I talk with them in the future, raise so much memories from me. 
+
