@@ -23,5 +23,53 @@ Anyway, the pager duty is part of our graduate students' life, and I believe tha
 ### Fun facts
 1. The pager will beep two times a day for testing purposes, noon and 3:30 pm. That's usually the time when we show off to friends or get curious looking on other people's faces. 
 2. During one duty (7 days), students will experience 0 or 1 earthquake most of the time. Some lucky ones will have earthquake swarm during their duty :-)
-3. 
+3. The average time to finish one earthquake is about 1 hour. 
+4. We swtich duty on Wednesday.  
 
+I downloaded the earthquake larger than M3.5 in Northern California (latitude 36 to 42, longitude -125 to -117, this is just a rough region) from 2011 to 2017, and made some quick figures to show some interesting facts. 
+
+#### When the earthquakes happen?
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/distribution_of_eq.png)
+
+It seems we have more earthquakes around the end of 2014. 
+
+#### Which hour during the day the earthquakes happen?
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/hist_day_hour.png)
+
+We see cleary two peaks around 12 am, how many of us remember the earthquakes wakes up in this time period, hands up! I at least have two cases in my memory. Also, earthquakes don't like noon, since everyone is at lunch :-)
+
+#### Which weekday the earthquakes happen?
+
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/hist_weekday.png) 
+
+Of course, Saturday pops up ..., you guys can not go hikings on Sa:-) It is actually interesting
+
+#### Number of earthquakes each week?
+
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/weekly_eqs.png)
+
+This figure shows the number of earthquakes in each week (Wedesday to next Wedsday), I am wondering who is the lucky one that have 15 earthquakes during the duty :-) Definitely not me.
+
+#### How many earthquakes we usually do during duty?
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/weekly_hist.png)
+
+This histogram shows us most students did 1 or no earthquakes during the duty week (the top two bars show). The following table is a quick statistic summary of the earthquake counts. The mean is 1.24 earthquakes per duty, and 50 percentile is 1 earthquake, and 2 earthquakes for 75 percentile. For today, I already did two earthquakes (lucky day), maybe I will do more earthquakes this duty and fall on the tails of the histogram. 
+
+|   |   |
+|:-:|:-:|
+| count |  313 | 
+| mean |  1.23 | 
+|  std |  1.90 | 
+|  50% |  1 | 
+|  75% |  2 | 
+|  max |  15 | 
+  
+##Why do we have an alarm response team? Why do we have to get up in the middle of the night to look at earthquakes?
+ 
+This is copied from [our Lab website](http://seismo.berkeley.edu/)! 
+
+As a seismological observatory, the Berkeley Seismological Laboratory has been involved in "earthquake information" for over a century. Part of our mission is to monitor earthquake activity and to provide "timely and accurate" information to state and federal agencies, to the media, and to the public.
+
+Our primary responsibilty is for local earthquakes. This has led to the development of the REDI project and the joint notification system with the USGS Menlo Park. Since much of this processing is automated, the Alarm Response workload has been significantly lightened. However, it is extremely important that the UCB alarm response people carefully review - and update, if necesssary - information for larger events. This reviewing process must be done in collaboration with the USGS person on duty.
+
+We also have a responsibility to respond to regional and teleseismic events. In this situation, our duties are to provide supporting information for the "authoritative" agency - for example, Caltech, the University of Washington, or NEIC. In general, we do not formally release our locations and magnitudes to the press if we have a solution from the authoritative group.
