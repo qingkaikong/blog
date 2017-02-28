@@ -28,6 +28,11 @@ Anyway, the pager duty is part of our graduate student life, and I believe that 
 
 I downloaded the earthquakes larger than M3.4 in Northern California (I choose M3.4, because after we finish the moment tensor solution, the magnitude may change from M3.5 to a smaller magnitude, i.e. M3.4, M3.3, and so on) from 2011 to 2017, and made some quick figures to show some interesting facts. 
 
+#### Where do the earthquakes happen?
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/location_of_eq.png)
+
+The red dots are the locations of earthquakes that our responders worked on in the last 6 years.  
+
 #### When do the earthquakes happen?
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/distribution_of_eq.png)
 
