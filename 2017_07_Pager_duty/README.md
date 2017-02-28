@@ -58,7 +58,7 @@ This figure shows the number of earthquakes in each week (Wednesday to next Wedn
 #### How many earthquakes do we usually see during duty?
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/weekly_hist.png)
 
-This histogram shows us most responders did 1 or no earthquakes during the duty week (the first two bars show this). The following table is a quick statistic summary of the earthquake counts. The mean is 0.75 earthquakes per duty, and the 50^th percentile is 0 earthquake, and 1 earthquakes for 75^th percentile. So far today, I have already done two earthquakes (my lucky day!), maybe I will do more earthquakes this tour of duty and fall on the tails of the histogram. 
+This histogram shows us most responders did 1 or no earthquakes during the duty week (the first two bars show this, and more than half of the weeks in the last 6 years ended up with none earthquake). The following table is a quick statistic summary of the earthquake counts. The mean is 0.75 earthquakes per duty, and the 50^th percentile is 0 earthquake, and 1 earthquakes for 75^th percentile. So far today, I have already done two earthquakes (my lucky day!), maybe I will do more earthquakes this tour of duty and fall on the tails of the histogram. 
 
 |   |   |
 |:-:|:-:|
