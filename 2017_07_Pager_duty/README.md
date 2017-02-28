@@ -26,43 +26,43 @@ Anyway, the pager duty is part of our graduate student life, and I believe that 
 3. The average time to finish one earthquake moment tensor is about 1 hour. 
 4. We switch duty on Wednesdays at 5 pm.  
 
-I downloaded the earthquakes larger than M3.5 in Northern California (latitude 36 to 42, longitude -125 to -117, this is just a rough region) from 2011 to 2017, and made some quick figures to show some interesting facts. 
+I downloaded the earthquakes larger than M3.4 in Northern California (I choose M3.4, because after we finish the moment tensor solution, the magnitude may change from M3.5 to a smaller magnitude, i.e. M3.4, M3.3, and so on) from 2011 to 2017, and made some quick figures to show some interesting facts. 
 
 #### When do the earthquakes happen?
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/distribution_of_eq.png)
 
-It seems we have more earthquakes around the end of 2014. 
+It seems earthquakes were randomly distributed. 
 
 #### Which hour during the day do the earthquakes happen?
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/hist_day_hour.png)
 
-We see clearly two peaks around 12 am, how many of us remember the earthquakes that woke up in this time period: hands up! I have at least have two cases in my memory. Also, earthquakes don't like noon time, since everyone is at lunch :-)
+We see clearly we have more earthquakes in the middle of night, how many of us remember the earthquakes that woke us up: hands up! I have at least have 3 or 4 cases in my memory. Also, earthquakes don't like noon time, since everyone is at lunch :-)
 
 #### On which weekday do the most earthquakes happen?
 
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/hist_weekday.png) 
 
-Of course, Wednesday pops up :-) And the good thing is that Sat and Sun are relatively low on earthquakes.  
+Of course, Tue to Thu pop up :-) Weekdays are busy! And the good thing is that Sat and Sun are relatively low on earthquakes.  
 
 #### What is the number of earthquakes each week?
 
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/weekly_eqs.png)
 
-This figure shows the number of earthquakes in each week (Wednesday to next Wednesday), I am wondering who is the lucky one that had 15 earthquakes during the duty :-) Definitely not me.
+This figure shows the number of earthquakes in each week (Wednesday to next Wednesday), I am wondering who is the lucky one that had 14 earthquakes during the duty :-) Definitely not me.
 
 #### How many earthquakes do we usually see during duty?
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_07_Pager_duty/figures/weekly_hist.png)
 
-This histogram shows us most responders did 1 or no earthquakes during the duty week (the first two bars show this). The following table is a quick statistic summary of the earthquake counts. The mean is 1.24 earthquakes per duty, and the 50^th percentile is 1 earthquake, and 2 earthquakes for 75^th percentile. So far today, I have already done two earthquakes (my lucky day!), maybe I will do more earthquakes this tour of duty and fall on the tails of the histogram. 
+This histogram shows us most responders did 1 or no earthquakes during the duty week (the first two bars show this). The following table is a quick statistic summary of the earthquake counts. The mean is 0.75 earthquakes per duty, and the 50^th percentile is 0 earthquake, and 1 earthquakes for 75^th percentile. So far today, I have already done two earthquakes (my lucky day!), maybe I will do more earthquakes this tour of duty and fall on the tails of the histogram. 
 
 |   |   |
 |:-:|:-:|
-| count |  313 | 
-| mean |  1.23 | 
-|  std |  1.90 | 
-|  50% |  1 | 
-|  75% |  2 | 
-|  max |  15 | 
+| count |  311 | 
+| mean |  0.75 | 
+|  std |  1.23 | 
+|  50% |  0 | 
+|  75% |  1 | 
+|  max |  14 | 
   
 ##Why do we have an alarm response team? Why do we have to get up in the middle of the night to look at earthquakes?
  
