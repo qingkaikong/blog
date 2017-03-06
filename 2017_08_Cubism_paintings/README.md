@@ -12,6 +12,14 @@ This is the original painting my wife drew. According to her, this painting clea
 2017-03-01
 ![jpg](https://raw.githubusercontent.com/qingkaikong/wife_paintings/master/figure_14.jpg)    
 
-The Cubist version of the tools. Now we are not focusing on some of the tools. We start to see the same things but from a completely different viewpoint. According to her, this is real life - we can not always see perfect things. Most of times, we only see some aspects of an object that scattered in our life. Besides, this also means that various people will see the same thing differently, we should have a comprehensive understanding of the views that different from ours. 
+The Cubist version of the tools. Now we are not focusing on some of the tools. We start to see the same things but from a completely different viewpoints. According to her, this is real life - we can not always see perfect things. Most of times, we only see some aspects of an object that scattered in our life. This is also a metaphor in our life. Nowadays is an age of knowledge explosion, and we get information from different resources - such as friends, Internet, TV, radios... However, just like the tools in the second painting, this information is often scrappy and in disorder, even conflicting with each other at times. In this situation, everyone should screen and reorganize all the information we get in order to see the truth of our world. More important, when our conclusions are inconsistent with others, we should be more tolerant and inclusive. Because people from different culture backgrounds often see things differently. But that doesn't simply mean we are wrong or they are wrong. Only if combining all different views together rather than sticking to our own thinking, we can have a better view and understanding of our world.
 
+<!---
+
+At first, I thought the cubism can be done with random order. I talked with my wife, and she told me in every artist's mind, they have a rough idea of where to put different parts, and when they put this way, you feel it is natural and beautiful. If you put in a random way, you may not feel the beauty of the painting. 
+
+
+https://www.mdc.edu/wolfson/Academic/ArtsLetters/art_philosophy/Humanities/Cubism/cubism%20front2.htm
+
+-->
 
