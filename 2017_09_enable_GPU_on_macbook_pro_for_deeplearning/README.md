@@ -195,6 +195,16 @@ Epoch 2/2
 
 We can see the GPU version is about 3 times faster than the CPU version on my Macbook Pro, which is a little disappointed (I was expecting more speed up when training deep learning model on GPU). I tested on a different dataset with a much deeper structure, it seems the gain is about the same, 3 times faster. It is better than nothing \^)^
 
+### Why GPU is faster than CPU (in some cases)
+
+GPUs is best for data parallel tasks which means that it maybe possible to make an algorithm run faster on a GPU if you can run the same computations on different pieces of data. GPUs are built on SIMD (Single Instruction Multiple Data) architecture. This means each streaming multiprocessor (SMP) (each GPU has multiple SMPs) can execute only one instruction on all the threads at a time but on potentially different data. 
+
+This means GPUs are much faster for some tasks, such as graphics processing, linear algebra, video encoding, Monte Carlo Simulation, multiplying matrices for a machine learning algorithm, or powering a database. 
+
+But GPUs get their speed for a cost. Usually, a single GPU core is much slower than a single CPU core to execute one instruction. But GPU has several cores (up to 16) each operating in a 32-wide SIMD mode (this is 16 * 32 = 496), which can execute the same instruction on about 500 pieces of data. In contrast, common CPUs only have up to 4 or 8 cores, and can operate in 4-wide SIMD which gives much lower parallelism. Even though GPUs can do more operations at a time, but it takes longer time than a CPU to execute the same instruction. The speed gain only comes from this same instruction is applied on multiple data at the same time. Therefore, if you have sequential tasks, CPU would be a better choice than GPUs. 
+
+Computations on GPUs involve an additional overhead as compared to CPUs in the data copy required from the main memory to GPU memory before any computation can be done. Thus it needs to be evaluated if data copy would not make the GPU implementation slower than the actual CPU implementation.
+
 ### What Can be Accelerated on the GPU ([ref](http://deeplearning.net/software/theano/tutorial/using_gpu.html#what-can-be-accelerated-on-the-gpu))
 The performance characteristics will of course vary from device to device, and also as we refine our implementation:
 
@@ -211,5 +221,10 @@ https://gist.github.com/Mistobaan/dd32287eeb6859c6668d
 https://gist.github.com/ageitgey/819a51afa4613649bd18    
 http://deeplearning.net/software/theano/install_macos.html
 http://deeplearning.net/software/theano/tutorial/using_gpu.html
+
+The following references are for why GPUs faster   
+http://stackoverflow.com/questions/6435428/why-are-gpus-more-powerful-than-cpus  
+https://www.quora.com/Why-are-GPUs-more-powerful-than-CPUs   
+https://www.quora.com/Why-does-a-GPU-perform-certain-calculations-faster-than-a-CPU   
 
 
