@@ -122,7 +122,7 @@ $conda install pygpu
 
 ### Config Theano to use GPU
 
-Add the following to your .theanorc config file in home directory (vi ~/.theanorc), device = cuda is telling theano to use GPU instead of CPU. 
+Add the following to your .theanorc config file in home directory (vi ~/.theanorc), device = cuda is telling theano to use GPU instead of CPU, this will make the default choice is GPU. 
 
 ```shell
 [global]
