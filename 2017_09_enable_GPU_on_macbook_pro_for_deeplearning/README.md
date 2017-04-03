@@ -45,6 +45,7 @@ $cd /usr/local/cuda/samples
 $sudo make -C 1_Utilities/deviceQuery
 $./bin/x86_64/darwin/release/deviceQuery
 
+## output
 ./bin/x86_64/darwin/release/deviceQuery Starting...
 
  CUDA Device Query (Runtime API) version (CUDART static linking)
@@ -144,11 +145,14 @@ Mapped name None to device cuda: GeForce GT 750M (0000:01:00.0)
 
 ### Let's see the speed gain
 
-Let's run the imdb_cnn.py from the examples in the [keras repo](https://github.com/fchollet/keras/tree/master/examples). 
+Let's run the imdb_cnn.py from the examples in the [keras repo](https://github.com/fchollet/keras/tree/master/examples). You can use the THEANO\_FLAGS=device=cpu or THEANO\_FLAGS=device=cuda0 to control running with cpu or gpu in the command line. 
 
-**CPU version**
+**CPU version**  
 
-```shell
+```bash
+$THEANO_FLAGS=device=cpu python imdb_cnn.py 
+## Output
+Using Theano backend.
 Loading data...
 25000 train sequences
 25000 test sequences
@@ -165,7 +169,14 @@ Epoch 2/2
 
 **GPU version**
 
-```shell
+```bash
+$THEANO_FLAGS=device=cuda0 python imdb_cnn.py 
+## Output
+Using Theano backend.
+/Users/qingkaikong/miniconda2/lib/python2.7/site-packages/theano/gpuarray/dnn.py:135: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to version 5.1.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 6020 on context None
+^[bMapped name None to device cuda0: GeForce GT 750M (0000:01:00.0)
 Loading data...
 25000 train sequences
 25000 test sequences
@@ -191,5 +202,6 @@ I thank the authors from the following links. Note that for the first two links,
 https://gist.github.com/Mistobaan/dd32287eeb6859c6668d   
 https://gist.github.com/ageitgey/819a51afa4613649bd18    
 http://deeplearning.net/software/theano/install_macos.html
+http://deeplearning.net/software/theano/tutorial/using_gpu.html
 
 
