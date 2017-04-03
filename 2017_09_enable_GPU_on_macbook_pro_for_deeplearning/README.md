@@ -195,6 +195,14 @@ Epoch 2/2
 
 We can see the GPU version is about 3 times faster than the CPU version on my Macbook Pro, which is a little disappointed (I was expecting more speed up when training deep learning model on GPU). I tested on a different dataset with a much deeper structure, it seems the gain is about the same, 3 times faster. It is better than nothing \^)^
 
+### What Can be Accelerated on the GPU ([ref](http://deeplearning.net/software/theano/tutorial/using_gpu.html#what-can-be-accelerated-on-the-gpu))
+The performance characteristics will of course vary from device to device, and also as we refine our implementation:
+
+* In general, matrix multiplication, convolution, and large element-wise operations can be accelerated a lot (5-50x) when arguments are large enough to keep 30 processors busy.
+* Indexing, dimension-shuffling and constant-time reshaping will be equally fast on GPU as on CPU.
+* Summation over rows/columns of tensors can be a little slower on the GPU than on the CPU.
+* Copying of large quantities of data to and from a device is relatively slow, and often cancels most of the advantage of one or two accelerated functions on that data. Getting GPU performance largely hinges on making data transfer to the device pay off.
+
 #### References 
 
 I thank the authors from the following links. Note that for the first two links, they are using tensorflow directly and I am using keras on top of Theano.   
