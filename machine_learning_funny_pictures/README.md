@@ -1,4 +1,4 @@
-The following are funny picutures related with machine learning or data science I found online. It is a great way to learn some concepts. Also, it is nice to use some of them in your talk so that students can learn something in a very relaxed environment. 
+The following are funny picutures related with machine learning or data science I found online. It is a great way to learn some concepts in this way. Also, it is nice to use some of them in your talk so that students can learn something in a very relaxed environment. Hope you also enjoy them!  
 
 ### Torture your data
 ![jpg](./figures/figure_1.jpg) 
@@ -45,12 +45,21 @@ The following are funny picutures related with machine learning or data science 
 ### Deep learning is easy
 ![jpg](./figures/figure_17.jpg)
 
+### Interview a data scientist
+![jpg](./figures/figure_18.png)
+
+### Change your habit
+![jpg](./figures/figure_19.jpg)
+
+### Label the axis
+![jpg](./figures/figure_20.png)
+
 ### The deep learning Saga
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E" frameborder="0" allowfullscreen></iframe>
 
 
 ## Acknowledgements
-All the figures are from internet, I thank all the authors.   
+All the figures are from internet, I thank all the authors. I found a lot of the pictures from the following links.   
 
 
 http://www.quertime.com/article/30-really-funny-siri-responses-to-weird-questions/
@@ -65,3 +74,4 @@ https://www.analyticsvidhya.com/blog/2015/12/hilarious-jokes-videos-statistics-d
 
 http://stats.stackexchange.com/questions/423/what-is-your-favorite-data-analysis-cartoon
 
+http://datacafeblog.com/tag/data-science-funny/
