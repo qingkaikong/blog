@@ -1,4 +1,4 @@
-The following are funny pictures related with machine learning or data science I found online. It is a great way to learn some concepts in this way. Also, it is nice to use some of them in your talk so that students can learn something in a very relaxed environment. Hope you also enjoy them! Also, if you find more interesting pictures, let me know as well.   
+The following are funny pictures related to machine learning or data science I found online. It is a great way to learn some concepts in this way. Also, it is nice to use some of them in your talk so that students can learn something in a very relaxed environment. Hope you also enjoy them! Also, if you find more interesting pictures, let me know as well.   
 
 ### Torture your data
 ![jpg](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_12_machine_learning_funny_pictures/figures/figure_1.jpg) 
@@ -53,6 +53,9 @@ The following are funny pictures related with machine learning or data science I
 
 ### Label the axis
 ![jpg](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_12_machine_learning_funny_pictures/figures/figure_20.png)
+
+### Information, Knowledge, and Creativity
+![jpg](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_12_machine_learning_funny_pictures/figures/figure_21.jpg) 
 
 ### The deep learning Saga
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E" frameborder="0" allowfullscreen></iframe>
