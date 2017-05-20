@@ -57,6 +57,9 @@ The following are funny pictures related to machine learning or data science I f
 ### Information, Knowledge, and Creativity
 ![jpg](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_12_machine_learning_funny_pictures/figures/figure_21.jpg) 
 
+### Machine learning (xkcd)
+![png](https://imgs.xkcd.com/comics/machine_learning_2x.png)
+
 ### The deep learning Saga
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mlXzufEk-2E" frameborder="0" allowfullscreen></iframe>
 
