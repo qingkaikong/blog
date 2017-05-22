@@ -65,7 +65,7 @@ plt.ylabel('Second component')
 
 
 
-![png](Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_5_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_13_visualize_high_dimensional_dataset/Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_5_1.png)
 
 
 The above figure is showing the first two components of the PCA. I colored the dots with the 3 classes so that we can see the hidden structures. 
@@ -101,7 +101,7 @@ plt.ylabel('Second dimension')
 
 
 
-![png](Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_10_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_13_visualize_high_dimensional_dataset/Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_10_1.png)
 
 
 ## 2 Clever way to plot
@@ -212,7 +212,7 @@ scatter_matrix(df[df.columns[[0, 1, 2, 3]]], diagonal = 'density')
 ```
 
 
-![png](Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_16_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_13_visualize_high_dimensional_dataset/Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_16_1.png)
 
 
 ### 2.2 Parallel Coordinates
@@ -237,7 +237,7 @@ parallel_coordinates(df, 'target')
 
 
 
-![png](Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_19_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_13_visualize_high_dimensional_dataset/Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_19_1.png)
 
 
 ### 2.3 Andrews Curve
@@ -262,7 +262,7 @@ andrews_curves(df, 'target')
 
 
 
-![png](Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_22_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_13_visualize_high_dimensional_dataset/Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_22_1.png)
 
 
 ### 2.4 Radviz
@@ -287,7 +287,7 @@ radviz(df, 'target')
 
 
 
-![png](Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_25_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_13_visualize_high_dimensional_dataset/Visualize_high_dimensional_dataset_files/Visualize_high_dimensional_dataset_25_1.png)
 
 
 These are usually my ways to visualize the high dimensional data to get a quick sense before I build further models. If you have better ways, please let me know. 
