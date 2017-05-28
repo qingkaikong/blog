@@ -134,7 +134,7 @@ print(zip(*a))
 
 ### lambda function
 
-I like lambda funciton, especially use it to define some simple funcitons. 
+I like lambda function, especially use it to define some simple functions. 
 
 
 ```python
