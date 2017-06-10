@@ -1,4 +1,4 @@
-Many times, we find ourselves need to use some of the python packages that we don't want to install in our system or certain version. For example, with panadas updated to version 0.20.2, but you find out you have some old codes depend on the version 0.19.2. In this situation, using a virtual enviroment to manage it will be really handy. Or you find some cool python packages online, but they require python 3 instead of 2. This week, I will write here what I usually do in these situations. 
+Many times, we find ourselves need to use some of the python packages that we don't want to install in our system or certain version. For example, with pandas updated to version 0.20.2, but you find out you have some old codes depend on the version 0.19.2. In this situation, using a virtual environment to manage it will be really handy. Or you find some cool python packages online, but they require Python 3 instead of 2. This week, I will write here what I usually do in these situations. 
 
 ## Using Virtualenv
 
@@ -30,9 +30,9 @@ After working in the virtual environment, to leave it:
 $ deactivate
 ```
 
-## Using python 3
+## Using Python 3
 
-If you are using python 3, things will be easier, since you can create the virtual environment directly:
+If you are using Python 3, things will be easier, since you can create the virtual environment directly:
 
 ```bash
 # for example: python3 -m venv /path/to/new/virtual/environment
@@ -42,7 +42,7 @@ $ source venv/bin/activate
 
 ## Managing Python 2 and 3 on MAC
 
-Sometimes, we want to have both Python 2 and 3 on our machine. Since I am using conda as the package manager, I also use it to manage different environments. On default, I am using Python 2.7, and I usually create and acivate Python 3 environment [this way](https://conda.io/docs/py2or3.html):
+Sometimes, we want to have both Python 2 and 3 on our machine. Since I am using conda as the package manager, I also use it to manage different environments. On default, I am using Python 2.7, and I usually create and activate Python 3 environment [this way](https://conda.io/docs/py2or3.html):
 
 ```bash
 # create an environment that have Python 3 installed
