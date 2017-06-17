@@ -30,17 +30,16 @@ After working in the virtual environment, to leave it:
 $ deactivate
 ```
 
-## Using Python 3
+## Using Python 3 to create virtual environment
 
-If you are using Python 3, things will be easier, since you can create the virtual environment directly:
+If you are using Python 3, things will be easier, since you can create the virtual environment directly, for example: python3 -m venv /path/to/new/virtual/environment
 
 ```bash
-# for example: python3 -m venv /path/to/new/virtual/environment
 $ python3 -m venv venv
 $ source venv/bin/activate
 ```
 
-## Managing Python 2 and 3 on MAC
+## Managing Python 2 and 3 on MAC using conda
 
 Sometimes, we want to have both Python 2 and 3 on our machine. Since I am using conda as the package manager, I also use it to manage different environments. On default, I am using Python 2.7, and I usually create and activate Python 3 environment [this way](https://conda.io/docs/py2or3.html):
 
@@ -51,5 +50,14 @@ $ conda create -n py3 python=3
 $ source activate py3
 # You can use the following to check different environment
 $ conda info -e
+```
+
+## Create Python 3 environment using Virtualenv
+
+The other way is to use Virtualenv to create a Python 3 environment. 
+
+```bash
+$ virtualenv -p python3 env
+$ source ./env/bin/activate
 ```
 
