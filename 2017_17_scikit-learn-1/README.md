@@ -1,5 +1,5 @@
 
-The material is based on my workshop at Berkeley - [Machine learning with scikit-learn](https://github.com/qingkaikong/20170628_ML_sklearn). I convert it here so that there will be more comments. Note that, the code is written using **Python 3.6**. It is better to read the slides I have first, which you can find it [here](http://qingkaikong.blogspot.com/2017/06/machine-learning-12-machine-learning.html). You can find the notebook on [Qingkai's Github](https://github.com/qingkaikong/blog/tree/master/2017_17_scikit-learn-1).  
+The material is based on my workshop at Berkeley - [Machine learning with scikit-learn](https://github.com/qingkaikong/20170628_ML_sklearn). I convert it here so that there will be more explanation. Note that, the code is written using **Python 3.6**. It is better to read the slides I have first, which you can find it [here](http://qingkaikong.blogspot.com/2017/06/machine-learning-12-machine-learning.html). You can find the notebook on [Qingkai's Github](https://github.com/qingkaikong/blog/tree/master/2017_17_scikit-learn-1).  
 
 # Scikit-learn Basics
 
@@ -11,7 +11,7 @@ The first thing when you build a working machine learning algorithm, you need da
 
 Let's start by loading some [pre-existing datasets](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets) in the scikit-learn, which comes with a few standard datasets. For example, the [iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) and [digits](http://archive.ics.uci.edu/ml/datasets/Pen-Based+Recognition+of+Handwritten+Digits) datasets for classification and the [boston house prices](http://archive.ics.uci.edu/ml/datasets/Housing) dataset for regression. Using these existing datasets, we can easily test the algorithms that we are interested in. 
 
-A dataset is a dictionary-like object that holds all the data and some metadata about the data. This data is stored in the .data member, which is a n_samples, n_features array. In the case of supervised problem, one or more response variables are stored in the .target member. More details on the different datasets can be found in the dedicated section.
+A dataset is a dictionary-like object that holds all the data and some metadata about the data. This data is stored in the .data member, which is a n\_samples, n\_features array. In the case of supervised problem, one or more response variables are stored in the .target member. More details on the different datasets can be found in the dedicated section.
 
 ### Load iris
 
@@ -46,7 +46,7 @@ print(iris.keys())
     dict_keys(['data', 'target', 'target_names', 'DESCR', 'feature_names'])
 
 
-There are five keys here, and data and target are storing the data and the label we are interested. feature_names and target_names are the corresponding header names. The DESCR has a list of infomation about this dataset. Let's print out each one of them and have a look. 
+There are five keys here, and data and target are storing the data and the label we are interested. feature\_names and target\_names are the corresponding header names. The DESCR has a list of information about this dataset. Let's print out each one of them and have a look. 
 
 
 ```python
@@ -70,7 +70,7 @@ print('We have %d data samples with %d features'%(iris.data.shape[0], iris.data.
     We have 150 data samples with 4 features
 
 
-The data is always a 2D array, shape (n_samples, n_features), although the original data may have had a different shape. The following prints out the target names and the representatoin of the target using 0, 1, 2. Each of them represent a class. 
+The data is always a 2D array, shape (n\_samples, n\_features), although the original data may have had a different shape. The following prints out the target names and the representation of the target using 0, 1, 2. Each of them represents a class. 
 
 
 ```python
@@ -347,7 +347,7 @@ print(model)
 
 ### Simple regression problem
 
-Let's fit a simple linear regression model to see what is the sklearn API looks like. We use a very simple datasets with 10 samples with added in noise. 
+Let's fit a simple linear regression model to see what is the sklearn API looks like. We use a very simple dataset with 10 samples with added in noise. 
 
 
 ```python
