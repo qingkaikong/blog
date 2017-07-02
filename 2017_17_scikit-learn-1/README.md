@@ -205,7 +205,7 @@ for i in range(64):
 ```
 
 
-![png](01_Scikit-learn_basics_files/01_Scikit-learn_basics_16_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_17_scikit-learn-1/01_Scikit-learn_basics_files/01_Scikit-learn_basics_16_0.png)
 
 
 ### Load Boston Housing Data
@@ -305,7 +305,7 @@ plt.ylabel('Price (thousands)')
 
 
 
-![png](01_Scikit-learn_basics_files/01_Scikit-learn_basics_20_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_17_scikit-learn-1/01_Scikit-learn_basics_files/01_Scikit-learn_basics_20_1.png)
 
 
 ## The Scikit-learn Estimator Object
@@ -369,7 +369,7 @@ plt.plot(x,y,'o')
 
 
 
-![png](01_Scikit-learn_basics_files/01_Scikit-learn_basics_30_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_17_scikit-learn-1/01_Scikit-learn_basics_files/01_Scikit-learn_basics_30_1.png)
 
 
 
@@ -397,7 +397,7 @@ plt.plot(x,y_noise,'o')
 
 
 
-![png](01_Scikit-learn_basics_files/01_Scikit-learn_basics_32_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_17_scikit-learn-1/01_Scikit-learn_basics_files/01_Scikit-learn_basics_32_1.png)
 
 
 
@@ -468,7 +468,7 @@ plt.legend()
 
 
 
-![png](01_Scikit-learn_basics_files/01_Scikit-learn_basics_37_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_17_scikit-learn-1/01_Scikit-learn_basics_files/01_Scikit-learn_basics_37_1.png)
 
 
 ## References
