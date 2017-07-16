@@ -1,5 +1,5 @@
 
-The material is based on my workshop at Berkeley - [Machine learning with scikit-learn](https://github.com/qingkaikong/20170628_ML_sklearn). I convert it here so that there will be more explanation. Note that, the code is written using **Python 3.6**. It is better to read the slides I have first, which you can find it [here](http://qingkaikong.blogspot.com/2017/06/machine-learning-12-machine-learning.html). You can find the notebook on [Qingkai's Github](https://github.com/qingkaikong/blog/tree/master/2017_18_scikit-learn-3). 
+The material is based on my workshop at Berkeley - [Machine learning with scikit-learn](https://github.com/qingkaikong/20170628_ML_sklearn). I convert it here so that there will be more explanation. Note that, the code is written using **Python 3.6**. It is better to read the slides I have first, which you can find it [here](http://qingkaikong.blogspot.com/2017/06/machine-learning-12-machine-learning.html). You can find the notebook on [Qingkai's Github](https://github.com/qingkaikong/blog/tree/master/2017_19_scikit-learn-3). 
 
 This week, we will talk how to use scikit-learn for regression problems. Instead of simple linear regression, we will do a regression problem on a non-linear dataset that we generate by ourselves.
 
@@ -43,7 +43,7 @@ plt.errorbar(x, y, 0.3, fmt='o')
 
 
 
-![png](03_Scikit_learn_regression_files/03_Scikit_learn_regression_3_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_19_scikit-learn-3/03_Scikit_learn_regression_files/03_Scikit_learn_regression_3_1.png)
 
 
 ## Fit a Random Forest Model
@@ -77,7 +77,7 @@ plt.legend()
 
 
 
-![png](03_Scikit_learn_regression_files/03_Scikit_learn_regression_5_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_19_scikit-learn-3/03_Scikit_learn_regression_files/03_Scikit_learn_regression_5_1.png)
 
 
 Print out the misfit using the mean squared error.
@@ -122,7 +122,7 @@ plt.legend()
 
 
 
-![png](03_Scikit_learn_regression_files/03_Scikit_learn_regression_10_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_19_scikit-learn-3/03_Scikit_learn_regression_files/03_Scikit_learn_regression_10_1.png)
 
 
 
@@ -164,7 +164,7 @@ plt.legend()
 
 
 
-![png](03_Scikit_learn_regression_files/03_Scikit_learn_regression_13_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_19_scikit-learn-3/03_Scikit_learn_regression_files/03_Scikit_learn_regression_13_1.png)
 
 
 
