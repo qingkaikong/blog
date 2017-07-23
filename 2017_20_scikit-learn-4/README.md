@@ -73,7 +73,7 @@ plt.ylabel('Second component')
 
 
 
-![png](04_Scikit-learn_clustering_and_dimensionality_reduction%0B_files/04_Scikit-learn_clustering_and_dimensionality_reduction%0B_8_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_20_scikit-learn-4/04_Scikit-learn_clustering_and_dimensionality_reduction_files/04_Scikit-learn_clustering_and_dimensionality_reduction%0B_8_1.png)
 
 
 ## Clustering with K-means
@@ -111,7 +111,7 @@ plt.ylabel('Second component')
 
 
 
-![png](04_Scikit-learn_clustering_and_dimensionality_reduction%0B_files/04_Scikit-learn_clustering_and_dimensionality_reduction%0B_13_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_20_scikit-learn-4/04_Scikit-learn_clustering_and_dimensionality_reduction_files/04_Scikit-learn_clustering_and_dimensionality_reduction%0B_13_1.png)
 
 
 ## Excercise
@@ -140,7 +140,7 @@ X_reduced = pca.transform(X)
 ```
 
 
-![png](04_Scikit-learn_clustering_and_dimensionality_reduction%0B_files/04_Scikit-learn_clustering_and_dimensionality_reduction%0B_15_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_20_scikit-learn-4/04_Scikit-learn_clustering_and_dimensionality_reduction_files/04_Scikit-learn_clustering_and_dimensionality_reduction%0B_15_0.png)
 
 
 
