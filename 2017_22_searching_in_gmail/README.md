@@ -1,4 +1,4 @@
-Many times we need to search some emails in the Gmail, but instead of simply search for name, or key word, there are many useful tricks in Gmail that can save you a lot of time. Here are some of the tricks I use all the time for search in my life.  
+Many times we need to search some emails in the Gmail, but instead of simply searching for a name or key word, there are many useful tricks in Gmail that can save you a lot of time. Here are some of the tricks I use all the time for search in my life. 
 
 ### Using different operators
 
@@ -51,7 +51,7 @@ after:2011/08/22 before:2011/08/31
 
 ### Combining operators
 
-By default, Gmail combine with multiple operator with and 'AND', for example, the above one is finding the emails after 2011/08/22 AND 2011/08/31. But there are more options:
+By default, Gmail combines with multiple operators with 'AND', for example, the above one is finding the emails after 2011/08/22 AND 2011/08/31. But there are more options:
 
 * Search exact phrase
 
