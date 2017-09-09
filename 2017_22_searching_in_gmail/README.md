@@ -2,16 +2,16 @@ Many times we need to search some emails in the Gmail, but instead of simply sea
 
 ### Using different operators
 
-* Finding emails with 'Barack Obama' in subject line
+* Finding emails with Obama in subject line
 
 ```
 subject:Obama
 ```
 
-* Finding the unread emails from Barack Obama with attachment that emails
+* Finding the unread emails from Obama with attachment that emails
 
 ```
-is:unread from:Barack Obama has:attachment
+is:unread from:Obama has:attachment
 ```
 
 * Finding emails larger than 10 MB in size: 
