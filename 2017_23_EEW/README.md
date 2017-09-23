@@ -10,6 +10,7 @@ The fundamental idea behind earthquake early warning system is: **Electronic sig
 When earthquake occurs, usually it generates two types of waves - p and s waves. P wave (Primary or Pressure wave) travels at about 6 km/s with usually small amount of energy, while S wave (Secondary or Shear wave) travels at about 3 km/s with a large amount of energy. The s wave usually causing a lot of damage during the earthquake, therefore, scientists thought, if we can detect the p wave fast, then we can issue an earthquake early warning to places that s wave hasn't arrived yet by taking advantage of the light speed of the electronic signal. Let's see a very nice explanation of the EEW from MSNBC's Rachel Maddow:
 
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SuQflIZ7zWM" frameborder="0" allowfullscreen></iframe>
 
 
