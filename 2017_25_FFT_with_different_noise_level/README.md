@@ -57,7 +57,7 @@ plotSpectrum(t, y,Fs, title = 'Test')
 ```
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_4_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_4_0.png)
 
 
 ## Let's try different noise levels
@@ -72,27 +72,27 @@ for i, std_noise in enumerate(np.arange(0.1, 3, 0.5)):
 ```
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_6_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_6_0.png)
 
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_6_1.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_6_1.png)
 
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_6_2.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_6_2.png)
 
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_6_3.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_6_3.png)
 
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_6_4.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_6_4.png)
 
 
 
-![png](FFT_different_noise_level_files/FFT_different_noise_level_6_5.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_25_FFT_with_different_noise_level/FFT_different_noise_level_files/FFT_different_noise_level_6_5.png)
 
 
 Next week, we will try to use different method to estimate the spectrum other than the simple FFT, and see if some method is better to get the frequency out even with a high-level of noise. 
