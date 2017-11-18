@@ -55,9 +55,9 @@ The way we can extract the information is that we check the page source code - h
 
 ![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2017_29_grab_data_from_website//figures/html_source.png)
 
-The red rectangle highlight the part we want, an HTML table is defined with the <table> tag. Each table row is defined with the <tr> tag. A table header is defined with the <th> tag. By default, table headings are bold and centered. A table data/cell is defined with the <td> tag. You can find more details [here](https://www.w3schools.com/html/html_tables.asp). 
+The red rectangle highlight the part we want, an HTML table is defined with the `<table> tag. Each table row is defined with the `<tr> tag. A table header is defined with the `<th> tag. By default, table headings are bold and centered. A table data/cell is defined with the `<td> tag. You can find more details [here](https://www.w3schools.com/html/html_tables.asp). 
 
-Now, we have an idea how the data is structured, and how we can extract it: we first find the table we want (there are multiple tables in the page). Then we find all the rows in the table, and loop through it see if it contains the 'Sea Level Pressure', if it does, we then extract the <span class> with an value "wx-value". By browsing through the html, we find the data we want stored in the table with a class 'responsive airport-history-summary-table' or id 'historyTable', which we can use this information to search. 
+Now, we have an idea how the data is structured, and how we can extract it: we first find the table we want (there are multiple tables in the page). Then we find all the rows in the table, and loop through it see if it contains the 'Sea Level Pressure', if it does, we then extract the `<span class> with an value "wx-value". By browsing through the html, we find the data we want stored in the table with a class 'responsive airport-history-summary-table' or id 'historyTable', which we can use this information to search. 
 
 
 ```python
