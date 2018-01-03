@@ -113,7 +113,7 @@ def kmToDIST(x):
     gamma = 2*np.arcsin(x/2./R) 
     
     dist = 2*R*rad2deg(sin(gamma / 2.))
-    return(dist)cartesian
+    return(dist)
 ```
 
 
