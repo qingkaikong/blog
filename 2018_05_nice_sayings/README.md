@@ -1,5 +1,6 @@
 This weekend is the Chinese new year, happy new year everyone! I don't know what to write, therefore, I will turn this week's post into a page to keep the nice sayings I really like:
 
+* Plodding wins the race - Aesop
 * You can never plan the future by the past - Edmund Burke
 * They can conquer who believe they can - Virgil
 * Ideas shape the course of history - John Maynard Keynes
