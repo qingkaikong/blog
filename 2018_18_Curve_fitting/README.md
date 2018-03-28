@@ -1,5 +1,5 @@
 
-Recently I have a friend asking me how to fit a function to some observational data using python. Well, it depends on whether you have a function form in mind. If you have one, then it is easy to do that. But even you don't know the form of the function you want to fit, you can still do it fairly easy. Here are some examples. 
+Recently I have a friend asking me how to fit a function to some observational data using python. Well, it depends on whether you have a function form in mind. If you have one, then it is easy to do that. But even you don't know the form of the function you want to fit, you can still do it fairly easy. Here are some examples. You can find all the code on [Qingkai's Github](https://github.com/qingkaikong/blog/tree/master/2018_18_Curve_fitting). 
 
 
 ```python
@@ -39,7 +39,7 @@ plt.show()
 ```
 
 
-![png](Curve_fitting_files/Curve_fitting_4_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_18_Curve_fitting/Curve_fitting_files/Curve_fitting_4_0.png)
 
 
 Since we have the function form in mind already, let's fit the data using scipy function - [curve_fit](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html)
@@ -79,7 +79,7 @@ plt.show()
 ```
 
 
-![png](Curve_fitting_files/Curve_fitting_9_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_18_Curve_fitting/Curve_fitting_files/Curve_fitting_9_0.png)
 
 
 ## More complicated case, you don't know the funciton form
@@ -116,7 +116,7 @@ plt.show()
 ```
 
 
-![png](Curve_fitting_files/Curve_fitting_13_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_18_Curve_fitting/Curve_fitting_files/Curve_fitting_13_0.png)
 
 
 
@@ -140,7 +140,7 @@ plt.show()
 ```
 
 
-![png](Curve_fitting_files/Curve_fitting_15_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_18_Curve_fitting/Curve_fitting_files/Curve_fitting_15_0.png)
 
 
 ## Of course, you could also use Machine Learning algorithms
@@ -172,7 +172,7 @@ plt.show()
 ```
 
 
-![png](Curve_fitting_files/Curve_fitting_19_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_18_Curve_fitting/Curve_fitting_files/Curve_fitting_19_0.png)
 
 
 #### Use ANN
@@ -202,5 +202,5 @@ plt.show()
 ```
 
 
-![png](Curve_fitting_files/Curve_fitting_22_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_18_Curve_fitting/Curve_fitting_files/Curve_fitting_22_0.png)
 
