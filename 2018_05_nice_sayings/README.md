@@ -1,5 +1,6 @@
 This weekend is the Chinese new year, happy new year everyone! I don't know what to write, therefore, I will turn this week's post into a page to keep the nice sayings I really like:
 
+* The most effective way to do it, is to do it - Amelia Earhart
 * Tact is the ability to describe others as they see themselves - Abraham Lincoln
 * The man who is swimming against the stream knows the strength of it - Woodrow Wilson
 * Plodding wins the race - Aesop
