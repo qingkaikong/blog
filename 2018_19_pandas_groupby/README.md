@@ -1,5 +1,5 @@
 
-Pandas groupby function is really useful and power in many ways. This week, I am going to show some examples of using this groupby functions that I usually use in  my analysis. 
+Pandas groupby function is really useful and powerful in many ways. This week, I am going to show some examples of using this groupby functions that I usually use in  my analysis. 
 
 
 ```python
