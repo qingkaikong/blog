@@ -1,5 +1,5 @@
 
-This week we will talk about the [Jenks Natural Breaks](https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization), it is mostly useful for determine the map ranges. It finds the best way to split the data into ranges, for example, if we have 50 countries, 15 countries with 0 - 3 values, 20 countries with values from 5 - 10, and 15 countris with 15 - 20. Therefore, if we want to plot them on a map with different colors, the best way we are splitting the data is 0-3, 3-10, and 10-20. The Jenks Natural Breaks is an algorithm that will figure this out by grouping the similar values into a group. Let's see the example below. I am using an existing package - [jenkspy](https://github.com/mthh/jenkspy), to calculate the breaks.    
+This week we will talk about the [Jenks Natural Breaks](https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization), it is mostly useful for determining the map ranges. It finds the best way to split the data into ranges, for example, if we have 50 countries, 15 countries with 0 - 3 values, 20 countries with values from 5 - 10, and 15 countries with 15 - 20. Therefore, if we want to plot them on a map with different colors, the best way we are splitting the data is 0-3, 3-10, and 10-20. The Jenks Natural Breaks is an algorithm that will figure this out by grouping the similar values into a group. Let's see the example below. I am using an existing package - [jenkspy](https://github.com/mthh/jenkspy), to calculate the breaks. You can find the notebook on [Qingkai's Github](https://github.com/qingkaikong/blog/tree/master/2018_20_jenkspy).      
 
 
 ```python
@@ -41,14 +41,14 @@ for b in breaks:
 ```
 
 
-![png](Introduction_to_jenkspy_files/Introduction_to_jenkspy_4_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_20_jenkspy/Introduction_to_jenkspy_files/Introduction_to_jenkspy_4_0.png)
 
 
-We could see the above figure that the breaks (black lines) are exact what we expect! 
+We could see the above figure that the breaks (black lines) are exactly what we expect! 
 
 ## How it works?
 
-The method is an iterative process to repeatly test different breaks in the dataset to determine which set of breaks has the smallest in-class variance. You can see the above figure that within each group/class, the variance is smallest. But note that if only minimize the in-class variance, if we maximize the out-class variance (that is variance between different groups), the breaks will fall into the middle of the gaps above figure (in this case, it will be 4.5, 12.5, but I didn't try). 
+The method is an iterative process to repeatedly test different breaks in the dataset to determine which set of breaks has the smallest in-class variance. You can see the above figure that within each group/class, the variance is smallest. But note that if only minimize the in-class variance, if we maximize the out-class variance (that is variance between different groups), the breaks will fall into the middle of the gaps above figure (in this case, it will be 4.5, 12.5, but I didn't try). 
 
 ## Another example
 
@@ -87,7 +87,7 @@ for b in breaks:
 ```
 
 
-![png](Introduction_to_jenkspy_files/Introduction_to_jenkspy_10_0.png)
+![png](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_20_jenkspy/Introduction_to_jenkspy_files/Introduction_to_jenkspy_10_0.png)
 
 
 ## References
