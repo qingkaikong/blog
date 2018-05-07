@@ -49,13 +49,6 @@ After we have this error, we could activate the debugger by using the magic comm
 %debug
 ```
 
-    > [0;32m<ipython-input-1-822cf3bc7b4e>[0m(3)[0;36msquare_number[0;34m()[0m
-    [0;32m      1 [0;31m[0;32mdef[0m [0msquare_number[0m[0;34m([0m[0mx[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
-    [0m[0;32m      2 [0;31m[0;34m[0m[0m
-    [0m[0;32m----> 3 [0;31m    [0msq[0m [0;34m=[0m [0mx[0m[0;34m**[0m[0;36m2[0m[0;34m[0m[0m
-    [0m[0;32m      4 [0;31m    [0msq[0m [0;34m+=[0m [0mx[0m[0;34m[0m[0m
-    [0m[0;32m      5 [0;31m[0;34m[0m[0m
-    [0m
     ipdb> h
     
     Documented commands (type help <topic>):
@@ -132,14 +125,6 @@ square_number('10')
 
     TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 
-
-    > [0;32m<ipython-input-1-822cf3bc7b4e>[0m(3)[0;36msquare_number[0;34m()[0m
-    [0;32m      1 [0;31m[0;32mdef[0m [0msquare_number[0m[0;34m([0m[0mx[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
-    [0m[0;32m      2 [0;31m[0;34m[0m[0m
-    [0m[0;32m----> 3 [0;31m    [0msq[0m [0;34m=[0m [0mx[0m[0;34m**[0m[0;36m2[0m[0;34m[0m[0m
-    [0m[0;32m      4 [0;31m    [0msq[0m [0;34m+=[0m [0mx[0m[0;34m[0m[0m
-    [0m[0;32m      5 [0;31m[0;34m[0m[0m
-    [0m
     ipdb> p sq
     *** NameError: name 'sq' is not defined
     ipdb> p x
@@ -201,11 +186,6 @@ square_number(3)
     (Pdb) p sq
     9
     (Pdb) c
-
-
-
-
-
     12
 
 
