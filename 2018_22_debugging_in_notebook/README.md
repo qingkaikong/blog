@@ -5,7 +5,7 @@ Let's start by showing you some examples:
 
 ### Activate debugger after we run the code
 
-The first example is after we have an error occured, for example, we have a function that square the input number, but:
+The first example is after we have an error occurred, for example, we have a function that squares the input number, but:
 
 
 ```python
@@ -75,7 +75,7 @@ After we have this error, we could activate the debugger by using the magic comm
     ipdb> q
 
 
-Here, the magnic command '%debug' activate the interactive debugger pdb in the notebook, and you can type to see the value of the variables after the error occur, like the ones I typed in above. There are some most frequent commands you can type in the pdb, like:
+Here, the magic command '%debug' activate the interactive debugger pdb in the notebook, and you can type to see the value of the variables after the error occurs, like the ones I typed in above. There are some most frequent commands you can type in the pdb, like:
 
 * n(ext) line and run this one
 * c(ontinue) running until next breakpoint
@@ -87,7 +87,7 @@ Here, the magnic command '%debug' activate the interactive debugger pdb in the n
 * h(elp) h
 * q(uit) the debugger
 
-You can find more infomation about the pdb from [here](https://docs.python.org/3/library/pdb.html)
+You can find more information about the pdb from [here](https://docs.python.org/3/library/pdb.html)
 
 ### Activate debugger before run the code
 
