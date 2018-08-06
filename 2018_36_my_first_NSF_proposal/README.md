@@ -65,6 +65,9 @@ NSF favors the budget to spend mostly on the students or postdocs (which is a ve
 * It is better to have some pictures in the proposal, a good rule of thumb I was told is to have one picture every other page. After all, one picture worth 1000 words. 
 * Leave more time on, I only have about 3 weeks to work on this proposal, I think the time is too short. 
 * After you write the whole package of the proposal, wait for a few days to go through them one more time, and you will find some better ideas (at least for me). 
+* My Earth science colleagues told me in the project description, it is better to write in a way that starts with a hypothesis and end with a potential solution. But my computer science colleagues don't think I need that, nor the sample proposals from CS have that. Therefore, there is clearly a difference between the different divisions. 
+* For the broader impact, I was told that it should be a summary for layman, since NSF will show this paragraph to the legislators and public. 
+* I was too afraid to talk to a program manager, but many people told me I should have, since they are usually very nice and give you a lot of ideas and first round comments. Maybe next time. 
 * The chance for me to get the grant is very slim, but at least, I went through the whole process, and now have a much better view of it. This will definitely help my next proposal. Also, hope that I could get some valuable comments from the reviewers so that I could make improvement. 
 
 
