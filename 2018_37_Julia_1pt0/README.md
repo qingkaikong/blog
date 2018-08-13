@@ -3,7 +3,7 @@ I think this week, the biggest news for me, maybe is [Julia 1.0 released](https:
 
 Julia is a great language that has a goal to put the best features from different languages into one:
 
-Using the reasons from [Wy we created Julia](https://julialang.org/blog/2012/02/why-we-created-julia):
+Using the reasons from [Why we created Julia](https://julialang.org/blog/2012/02/why-we-created-julia):
 
 
 > We want a language that’s open source, with a liberal license. We want the speed of C with the dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with obvious, familiar mathematical notation like Matlab. We want something as usable for general programming as Python, as easy for statistics as R, as natural for string processing as Perl, as powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and we want it compiled.
