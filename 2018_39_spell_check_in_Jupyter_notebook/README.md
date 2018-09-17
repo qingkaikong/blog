@@ -10,16 +10,16 @@ jupyter nbextension enable spellchecker/main
 
 After successfully running the above commands, you should see the screen like this:
 
-![Success install](./success_install.png)
+![Success install](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_39_spell_check_in_Jupyter_notebook/success_install.png)
 
 Now if you launch the Jupyter notebook, and in the dashboard, you will see a new option for the Nbextensions. 
 
-![nbextension](./nbextension.png)
+![nbextension](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_39_spell_check_in_Jupyter_notebook/nbextension.png)
 
 Within it, you can see all the extensions and the ones you enabled. 
 
-![Enable nbextension](./enable_extension.png)
+![Enable nbextension](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_39_spell_check_in_Jupyter_notebook/enable_extension.png)
 
 Now, let's go to the notebook, and type something in a markdown cell, we could see that it can highlight the word we misspelled. 
 
-![Spell check](./spell_check.png)
+![Spell check](https://raw.githubusercontent.com/qingkaikong/blog/master/2018_39_spell_check_in_Jupyter_notebook/spell_check.png)
